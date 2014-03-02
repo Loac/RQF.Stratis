@@ -11,6 +11,18 @@
         redPosition
  */
 
+private [
+	"_playableMarkers",
+	"_marker"
+];
+
+// Удалить игровые маркеры.
+_playableMarkers = [] call rqf_fnc_getPlayableMarkers;
+
+{
+    deleteMarker _x;
+} forEach _playableMarkers;
+
 // Визуально обозначить цель.
 _marker = ["TARGET", targetPosition, [["shape", "ELLIPSE"], ["size", [targetSize, targetSize]]]] call rqf_fnc_createMarker;
 

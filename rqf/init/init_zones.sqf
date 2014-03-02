@@ -90,8 +90,3 @@ while {not _blueReady || not _redReady} do {
 
     // Если не получается найти позиции для сторон, найти новую цель.
 };
-
-// Удалить игровые маркеры.
-{
-    deleteMarker _x;
-} forEach _playableMarkers;

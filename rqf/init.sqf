@@ -34,7 +34,7 @@ blueHold = false;
 redHold = false;
 
 // Отключить переговоры (теоретически).
-player setVariable ["BIS_noCoreConversations", true];
+// player setVariable ["BIS_noCoreConversations", true];
 
 // Выключить сохранения.
 enableSaving [false, false];
@@ -44,18 +44,14 @@ enableSaving [false, false];
 // Загрузить параметры.
 // _null = [] execVM "rqf\init\init_params.sqf";
 
-if (isServer) then {
-    "------------------------------------" call BIS_fnc_log;
-};
-
 // Выбрать цель и стартовые позиции (server).
 _handle = [] execVM "rqf\init\init_zones.sqf";
 waitUntil { scriptDone _handle };
 
+
 // Magic.
 // If (!IsServer) Then {WaitUntil {!IsNull Player And IsPlayer Player};};
-
-["bluePosition %1", bluePosition] call BIS_fnc_error;
+// ["bluePosition %1", bluePosition] call BIS_fnc_error;
 
 // Выбрать цель и стартовые позиции (all).
 _null = [] execVM "rqf\init\init_markers.sqf";
@@ -74,7 +70,9 @@ _null = [] execvm "rqf\init\init_arbitrator.sqf";
 
 // Development.
 
+
 _null = player addAction ["Teleport", "rqf\helpers\dbgClickTeleport.sqf"];
+
 // _null = player addAction ["Init playable zones", "rqf\init\init_playableZone.sqf"];
 // _null = player addAction ["Add triggers", "rqf\init\init_triggers.sqf"];
 // _null = player addAction ["Jump", {_null = [5] execVM "rqf\functions\fnc_jumpForward.sqf"}];

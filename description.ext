@@ -1,7 +1,7 @@
 enableDebugConsole = 1;
 allowFunctionsLog = 1;
 
-onLoadName = "RQF 0.2";
+onLoadName = "RQF 0.5";
 author = "Loac";
 onLoadMission = "Good luck";
 
