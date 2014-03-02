@@ -3,10 +3,6 @@
         Dmitry Loac.
  */
 
-// Global variables.
-
-dbgMarkerIndex = 1;
-
 // FIX: Улучшить проверку места спавна. Все еще может заспавнить на берегу или в канмях.
 
 // Вынести в переменые настройки.
@@ -21,11 +17,13 @@ targetDistance = 200;
 sideDeviation = 40;
 
 // Таймеры сторон.
-blueTimer = 100;
-redTimer = 100;
+blueTimer = 30;
+redTimer = 30;
 
 // Позиция цели.
 targetPosition = [];
+
+publicVariable "bluePosition";
 
 // Позиции сторон.
 bluePosition = [];
@@ -35,21 +33,43 @@ redPosition = [];
 blueHold = false;
 redHold = false;
 
+// Отключить переговоры (теоретически).
+player setVariable ["BIS_noCoreConversations", true];
+
+// Выключить сохранения.
+enableSaving [false, false];
+
 // Init.
 
-// Выбрать цель и стартовые позиции.
-_null = [] execVM "rqf\init\init_playableZone.sqf";
+// Загрузить параметры.
+// _null = [] execVM "rqf\init\init_params.sqf";
 
-// Установить триггеры.
+if (isServer) then {
+    "------------------------------------" call BIS_fnc_log;
+};
+
+// Выбрать цель и стартовые позиции (server).
+_handle = [] execVM "rqf\init\init_zones.sqf";
+waitUntil { scriptDone _handle };
+
+// Magic.
+// If (!IsServer) Then {WaitUntil {!IsNull Player And IsPlayer Player};};
+
+["bluePosition %1", bluePosition] call BIS_fnc_error;
+
+// Выбрать цель и стартовые позиции (all).
+_null = [] execVM "rqf\init\init_markers.sqf";
+
+// Установить триггеры (server).
 _null = [] execVM "rqf\init\init_triggers.sqf";
 
-// Телепортировать на позиции.
+// Телепортировать на позиции (server).
 _null = [] execvm "rqf\init\init_positions.sqf";
 
-// Добавить вейпоинты ботам.
+// Добавить вейпоинты ботам (server).
 _null = [] execvm "rqf\init\init_ai.sqf";
 
-// Запустить "арбитра".
+// Запустить "арбитра" (server).
 _null = [] execvm "rqf\init\init_arbitrator.sqf";
 
 // Development.
@@ -59,7 +79,7 @@ _null = player addAction ["Teleport", "rqf\helpers\dbgClickTeleport.sqf"];
 // _null = player addAction ["Add triggers", "rqf\init\init_triggers.sqf"];
 // _null = player addAction ["Jump", {_null = [5] execVM "rqf\functions\fnc_jumpForward.sqf"}];
 // _null = player addAction ["Teleport to positions", "rqf\init\init_positions.sqf"];
-_null = player addAction ["Teleport red units", "rqf\helpers\dbgUnitsTeleport.sqf"];
+// _null = player addAction ["Teleport red units", "rqf\helpers\dbgUnitsTeleport.sqf"];
 
 _null = [] execvm "rqf\helpers\dbgInfoCustom.sqf";
 

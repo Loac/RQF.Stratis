@@ -1,7 +1,10 @@
+enableDebugConsole = 1;
 allowFunctionsLog = 1;
 
-#include "debriefing.hpp"
+onLoadName = "RQF 0.2";
+author = "Loac";
+onLoadMission = "Good luck";
 
-class CfgFunctions {
-	#include "rqf\cfgFunctions.hpp"
-};
+#include "rqf\cfgParams.hpp"
+#include "rqf\cfgFunctions.hpp"
+#include "rqf\cfgDebriefing.hpp"

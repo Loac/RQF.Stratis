@@ -2,8 +2,8 @@ class CfgDebriefing
 {
     class win_blueHoldTarget
     {
-        title = "You win";
-        subtitle = "Blue hold the target";
+        title = $STR_RQF_win;
+        subtitle = $STR_RQF_blueHoldTarget;
         description = "Yippee Ki Yay, motherfuckers.";
         pictureBackground = "";
         picture = "";
@@ -12,8 +12,8 @@ class CfgDebriefing
 
     class lose_blueHoldTarget
     {
-        title = "You lose";
-        subtitle = "Blue hold the target";
+        title = $STR_RQF_lose;
+        subtitle = $STR_RQF_blueHoldTarget;
         description = "I can't belive this shit.";
         pictureBackground = "";
         picture = "";
@@ -22,8 +22,8 @@ class CfgDebriefing
 
     class win_redHoldTarget
     {
-        title = "You win";
-        subtitle = "Red hold the target";
+        title = $STR_RQF_win;
+        subtitle = $STR_RQF_blueHoldTarget;
         description = "Yippee Ki Yay, motherfuckers.";
         pictureBackground = "";
         picture = "";
@@ -32,8 +32,8 @@ class CfgDebriefing
 
     class lose_redHoldTarget
     {
-        title = "You lose";
-        subtitle = "Red hold the target";
+        title = $STR_RQF_lose;
+        subtitle = $STR_RQF_blueHoldTarget;
         description = "I can't belive this shit.";
         pictureBackground = "";
         picture = "";

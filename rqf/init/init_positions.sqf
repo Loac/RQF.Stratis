@@ -15,6 +15,8 @@
 
 // TODO: Теоретически, может не хватить места для спавна. В этом случае надо заново определять цель и искать места спавна.
 
+if (not isServer) exitWith {};
+
 private [
     "_blueUnits",
     "_redUnits",
@@ -30,18 +32,25 @@ _redUnits = [];
 _blueCount = 0;
 _redCount = 0;
 
-if (isMultiplayer) then {
-    _blueCount = playersNumber west;
-    _redCount = playersNumber east;
-}
-else {
-    {
-        switch (side _x) do {
-            case west: { _blueCount = _blueCount + 1 };
-            case east: { _redCount = _redCount + 1 };
-       };
-    } forEach allUnits;
-};
+// if (isMultiplayer) then {
+//     _blueCount = playersNumber west;
+//     _redCount = playersNumber east;
+// }
+// else {
+//     {
+//         switch (side _x) do {
+//             case west: { _blueCount = _blueCount + 1 };
+//             case east: { _redCount = _redCount + 1 };
+//        };
+//     } forEach allUnits;
+// };
+
+{
+    switch (side _x) do {
+        case west: { _blueCount = _blueCount + 1 };
+        case east: { _redCount = _redCount + 1 };
+   };
+} forEach allUnits;
 
 // Найти место для телепорта.
 _bluePlaces = selectBestPlaces [bluePosition, 50, "meadow", 5, _blueCount];

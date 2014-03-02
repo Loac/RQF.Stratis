@@ -11,6 +11,8 @@
 
  */
 
+if (not isServer) exitWith {};
+
 private [
     "_position",
     "_radius",

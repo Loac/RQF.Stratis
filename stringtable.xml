@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Random Quick Fight">
     <Package name="Main">
-        <Key ID="STR_RQF_endMission_blueHoldTarget_title">
-            <Original>Weapons</Original>
-            <Russian>Оружие</Russian>
+        <Key ID="STR_RQF_win">
+            <Original>You win</Original>
+            <Russian>Победа</Russian>
+        </Key>
+        <Key ID="STR_RQF_lose">
+            <Original>You lose</Original>
+            <Russian>Поражение</Russian>
+        </Key>
+        <Key ID="STR_RQF_blueHoldTarget">
+            <Original>Blue hold the target</Original>
+            <Russian>Синие удержали территорию</Russian>
+        </Key>
+        <Key ID="STR_RQF_redHoldTarget">
+            <Original>Red hold the target</Original>
+            <Russian>Красные удержали территорию</Russian>
         </Key>
     </Package>
 </Project>

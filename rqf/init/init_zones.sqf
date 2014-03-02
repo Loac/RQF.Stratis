@@ -6,9 +6,6 @@
         Определить игровую зону (оранжевые маркеры).
         Разместить цель и отряды.
 
-    Example:
-        _playableZone = [] execVM "rqf\functions\fnc_getPlayableZone.sqf";
-
     See:
         findEmptyPosition
         isFlatEmpty
@@ -19,6 +16,8 @@
         bluePosition
         redPosition
  */
+
+if (not isServer) exitWith {};
 
 private [
     "_blueDegrees",
@@ -96,14 +95,3 @@ while {not _blueReady || not _redReady} do {
 {
     deleteMarker _x;
 } forEach _playableMarkers;
-
-
-// Визуально обозначить цель.
-_marker = ["TARGET", targetPosition, [["shape", "ELLIPSE"], ["size", [targetSize, targetSize]]]] call rqf_fnc_createMarker;
-
-// Поставить маркер для синих.
-_marker = ["BLUESTART", bluePosition, [["type", "mil_dot"], ["color", "ColorBlue"]]] call rqf_fnc_createMarker;
-
-// Поставить маркер для красных.
-_marker = ["REDSTART", redPosition, [["type", "mil_dot"], ["color", "ColorRed"]]] call rqf_fnc_createMarker;
-
