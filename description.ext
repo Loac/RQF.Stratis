@@ -1,0 +1,7 @@
+allowFunctionsLog = 1;
+
+#include "debriefing.hpp"
+
+class CfgFunctions {
+	#include "rqf\cfgFunctions.hpp"
+};

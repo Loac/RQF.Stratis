@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Random Quick Fight">
+    <Package name="Main">
+        <Key ID="STR_RQF_endMission_blueHoldTarget_title">
+            <Original>Weapons</Original>
+            <Russian>Оружие</Russian>
+        </Key>
+    </Package>
+</Project>
