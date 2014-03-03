@@ -6,7 +6,7 @@
         Find all palyable markers.
 
     Example:
-        _playableMarkers = [] execVM "rqf\functions\fnc_getPlayableMarkers.sqf";
+        _playableMarkers = [] execVM "rqf\functions\fn_getPlayableMarkers.sqf";
  */
 
 private [

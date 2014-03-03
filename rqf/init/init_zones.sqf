@@ -3,21 +3,21 @@
         Dmitry Loac.
 
     Description:
-        Определить игровую зону (оранжевые маркеры).
-        Разместить цель и отряды.
+        Define play zones (ColorOrange markers).
 
     See:
         findEmptyPosition
         isFlatEmpty
         BIS_fnc_findSafePos
+        fn_getPlayableMarkers.sqf
 
-    Global variables:
+    External variables:
+        targetDistance / param
+        sideDeviation  / param
         targetPosition
         bluePosition
         redPosition
  */
-
-if (not isServer) exitWith {};
 
 private [
     "_blueDegrees",
