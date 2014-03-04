@@ -64,7 +64,7 @@ if (isServer) then {
     /*
         Teleport all unit to start positions.
     */
-    _handle = [] execVM "rqf\init\init_positions.sqf"; waitUntil { scriptDone _handle };
+    _handle = [] execVM "rqf\init\init_positions.sqf";
 
     /*
         Set arbitr.
@@ -81,6 +81,7 @@ if (isServer) then {
     */
     _null = [] execVM "rqf\init\init_ai.sqf";
 
+    // Flag to start mission.
     startMission = true;
 
     // Send variable.
@@ -91,7 +92,7 @@ if (not isDedicated) then {
     /*
         Client side procedures.
     */
-    _handle = [] execVM "rqf\init\init_client.sqf"; waitUntil { scriptDone _handle };
+    _handle = [] execVM "rqf\init\init_client.sqf";
 
     /*
         Development magic.

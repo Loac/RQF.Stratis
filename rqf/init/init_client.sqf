@@ -13,6 +13,9 @@ private [
     "_camera"
 ];
 
+// Disable saving.
+enableSaving [false, false];
+
 // Delete playable markers.
 _playableMarkers = [] call rqf_fnc_getPlayableMarkers;
 
@@ -26,10 +29,7 @@ sleep 0.01;
 _camera = "camera" camCreate (position player);
 _camera cameraEffect ["internal", "BACK"];
 _camera camCommit 0;
-cutText ["A long time ago in a galaxy far,\nfar away...","BLACK OUT", 120];
-
- // Disable saving.
-enableSaving [false, false];
+cutText ["A long time ago in a galaxy far,\nfar away...", "BLACK FADED", 120];
 
 // Radio off.
 enableRadio false;
