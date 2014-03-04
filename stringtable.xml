@@ -17,5 +17,13 @@
             <Original>Red hold the target</Original>
             <Russian>Красные удержали территорию</Russian>
         </Key>
+        <Key ID="STR_RQF_blueDominate">
+            <Original>Blue forces dominate</Original>
+            <Russian>Синие доминируют</Russian>
+        </Key>
+        <Key ID="STR_RQF_redDominate">
+            <Original>Red forces dominate</Original>
+            <Russian>Красные доминируют</Russian>
+        </Key>
     </Package>
 </Project>
