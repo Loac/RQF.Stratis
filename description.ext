@@ -5,6 +5,6 @@ onLoadName = "RQF 0.1";
 author = "Loac";
 onLoadMission = "Good luck";
 
-#include "rqf\cfgParams.hpp"
-#include "rqf\cfgFunctions.hpp"
-#include "rqf\cfgDebriefing.hpp"
+#include "rqf\configs\cfgParams.hpp"
+#include "rqf\configs\cfgFunctions.hpp"
+#include "rqf\configs\cfgDebriefing.hpp"
