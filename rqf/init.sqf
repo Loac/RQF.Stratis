@@ -42,7 +42,7 @@ if (isServer) then {
     /*
         Set parameters.
     */
-    // _null = [] execVM "rqf\init\init_params.sqf";
+    // _handle = [] execVM "rqf\init\init_params.sqf"; waitUntil { scriptDone _handle };
 
     /*
         Set spawn and target positions:
@@ -60,22 +60,30 @@ if (isServer) then {
     /*
         Teleport all unit to start positions.
     */
-    _handle = [] execvm "rqf\init\init_positions.sqf";
+    _handle = [] execVM "rqf\init\init_positions.sqf";
 
     /*
         Set arbitr.
     */
-    _handle = [] execvm "rqf\init\init_arbitrator.sqf";
+    _handle = [] execVM "rqf\init\init_arbitrator.sqf";
 
     /*
         Set markers for players.
     */
     _handle = [] execVM "rqf\init\init_markers.sqf";
+
+    /*
+        Add waypoints for AI.
+    */
+    //_null = [] execVM "rqf\init\init_ai.sqf";
 };
 
 f_quickfight = 1;
 f_param_startdelay = 3;
 if (not isDedicated) then {
+    // Magic.
+    // If (!IsServer) then {WaitUntil {!IsNull Player And IsPlayer Player};};
+
     // Disable saving.
     enableSaving [false, false];
 
@@ -111,7 +119,7 @@ if (not isDedicated) then {
     // _null = player addAction ["Jump", {_null = [5] execVM "rqf\functions\fnc_jumpForward.sqf"}];
     // _null = player addAction ["Teleport to positions", "rqf\init\init_positions.sqf"];
 
-    // _null = [] execvm "rqf\helpers\dbgInfoCustom.sqf";
+    // _null = [] execVM "rqf\helpers\dbgInfoCustom.sqf";
 };
 
 // Magic.
@@ -119,11 +127,6 @@ if (not isDedicated) then {
 // ["bluePosition %1", bluePosition] call BIS_fnc_error;
 
 
-
-
-
-// Добавить вейпоинты ботам (server).
-//_null = [] execvm "rqf\init\init_ai.sqf";
 
 // Тест мультиплеера.
     // Проверить постановку локальных маркеров.

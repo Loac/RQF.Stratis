@@ -8,7 +8,6 @@
     See:
         https://community.bistudio.com/wiki/Mission_Editor:_Waypoints
         https://community.bistudio.com/wiki/setWaypointType
-
  */
 
 private [
@@ -18,7 +17,7 @@ private [
 ];
 
 {
-    // Добавлять вейпоинты только если в группе нет игроков.
+    // Add waypoints for groups without players.
     _isGroupPlayable = false;
 
     {
@@ -27,7 +26,6 @@ private [
         };
     } forEach units _x;
 
-    // Если в группе есть игроки, не добавлять ей вейпоинты.
     if (not _isGroupPlayable) then {
         _position = getMarkerPos "TARGET";
         _radius = getMarkerSize "TARGET" select 0;
