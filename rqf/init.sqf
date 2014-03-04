@@ -38,6 +38,12 @@ redHold = false;
 // finishMissionInit;
 
 if (isServer) then {
+
+    /*
+        Set parameters.
+    */
+    // _null = [] execVM "rqf\init\init_params.sqf";
+
     /*
         Set spawn and target positions:
             targetPosition
@@ -73,12 +79,12 @@ if (not isDedicated) then {
     // Disable saving.
     enableSaving [false, false];
 
-// Delete playable markers.
-_playableMarkers = [] call rqf_fnc_getPlayableMarkers;
+    // Delete playable markers.
+    _playableMarkers = [] call rqf_fnc_getPlayableMarkers;
 
-{
-    deleteMarker _x;
-} forEach _playableMarkers;
+    {
+        deleteMarker _x;
+    } forEach _playableMarkers;
 
     sleep 0.01;
     _cam = "camera" camCreate (position player);
@@ -107,9 +113,6 @@ _playableMarkers = [] call rqf_fnc_getPlayableMarkers;
 
     // _null = [] execvm "rqf\helpers\dbgInfoCustom.sqf";
 };
-
-// Загрузить параметры.
-// _null = [] execVM "rqf\init\init_params.sqf";
 
 // Magic.
 // If (!IsServer) Then {WaitUntil {!IsNull Player And IsPlayer Player};};

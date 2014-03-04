@@ -29,8 +29,8 @@
             Not used now.
 
     Example:
-        _marker = ["MARKER", position player, [["type", "mil_dot"], ["text", "I'am here."]]] execVM "rqf\functions\fnc_createMarker.sqf";
-        _marker = ["MARKER", position player, [["shape", "ELLIPSE"], ["size", [50, 50]]]] execVM "rqf\functions\fnc_createMarker.sqf";
+        _marker = ["MARKER", position player, [["type", "mil_dot"], ["text", "I'am here."]]] execVM "rqf\functions\fn_createMarker.sqf";
+        _marker = ["MARKER", position player, [["shape", "ELLIPSE"], ["size", [50, 50]]]] execVM "rqf\functions\fn_createMarker.sqf";
 
     See:
         https://community.bistudio.com/wiki/createMarker
