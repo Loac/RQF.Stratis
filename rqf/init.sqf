@@ -28,10 +28,13 @@
 // Flag of mission complete.
 completeMission = "";
 
-// Flag of mission start.
-startMission = false;
-
 if (isServer) then {
+    // Flag to start mission.
+    startMission = false;
+
+    // Send variable.
+    publicVariable "startMission";
+
     // Position of target.
     targetPosition = [];
 
@@ -84,11 +87,15 @@ if (isServer) then {
     // Flag to start mission.
     startMission = true;
 
+    testVariable = 100;
+
     // Send variable.
     publicVariable "startMission";
+    publicVariable "testVariable";
 };
 
 if (not isDedicated) then {
+
     /*
         Client side procedures.
     */
@@ -104,6 +111,7 @@ if (not isDedicated) then {
 // ["bluePosition %1", bluePosition] call BIS_fnc_error;
 // ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
 
+// Триггеры на смерть бойцов с одной стороны.
 // Переместить камеру к таргету.
 // Параметры.
 // Постановка задачи.

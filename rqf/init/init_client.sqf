@@ -10,7 +10,8 @@
  */
 
 private [
-    "_camera"
+    "_camera",
+    "_playableMarkers"
 ];
 
 // Disable saving.

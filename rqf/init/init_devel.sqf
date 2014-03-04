@@ -1,5 +1,5 @@
 _null = player addAction ["Teleport", "rqf\helpers\dbgClickTeleport.sqf"];
-_null = player addAction ["Teleport red units", "rqf\helpers\dbgUnitsTeleport.sqf"];
+// _null = player addAction ["Teleport red units", "rqf\helpers\dbgUnitsTeleport.sqf"];
 
 // _null = player addAction ["Init playable zones", "rqf\init\init_playableZone.sqf"];
 // _null = player addAction ["Add triggers", "rqf\init\init_triggers.sqf"];
