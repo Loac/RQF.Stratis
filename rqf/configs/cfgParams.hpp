@@ -24,7 +24,7 @@ class Params
         values[] = { 0, 50, 100, 200 };
         texts[] = { "0", "50", "100", "200" };
         default = 50;
-        code = "targetDistance = %1";
+        code = "sideDeviation = %1";
     };
 
     class sideTimer
@@ -50,5 +50,13 @@ class Params
         texts[] = { "Yes", "No" };
         default = false;
         code = "randomDayTime = %1";
+    };
+
+    class enableCreeps {
+        title = "Enable AI";
+        values[] = { true, false };
+        texts[] = { "Yes", "No" };
+        default = false;
+        code = "enableCreeps = %1";
     };
 };

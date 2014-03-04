@@ -1,23 +1,31 @@
 /*
-    Author:
-        Dmitry Loac.
-
     Description:
         Load parameters from config file.
  */
 
 private [
 	"_index",
-	"_name"
+	"_name",
+	"_value",
+	"_code"
 ];
 
 _index = 0;
 
 {
-    _name = configName ((missionConfigFile >> "Params") select _index);
+	_name = configName ((missionConfigFile >> "Params") select _index);
 
-    call compile format["%1 = %2", _name, _x];
+	_value = 0;
+	if (not isNil "paramsArray") then {
+		_value = paramsArray select _index;
+	}
+	else {
+		_value = getNumber (missionConfigFile >> "Params" >> _name >> "default");
+	};
 
-    _index = _index + 1;
+	_code = getText (missionConfigFile >> "Params" >> _name >> "code");
 
+	call compile format[_code, _value];
+
+	_index = _index +1;
 } forEach paramsArray;

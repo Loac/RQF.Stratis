@@ -5,6 +5,10 @@
     Description:
         Add waypoints for AI.
 
+    External:
+        targetPosition
+        targetSize
+
     See:
         https://community.bistudio.com/wiki/Mission_Editor:_Waypoints
         https://community.bistudio.com/wiki/setWaypointType
@@ -13,27 +17,24 @@
 private [
     "_position",
     "_radius",
-    "_isGroupPlayable"
+    "_isOnlyAI"
 ];
 
 {
     // Add waypoints for groups without players.
-    _isGroupPlayable = false;
+    _isOnlyAI = true;
 
     {
         if (isPlayer _x) then {
-            _isGroupPlayable = true;
+            _isOnlyAI = false;
         };
     } forEach units _x;
 
-    if (not _isGroupPlayable) then {
-        _position = getMarkerPos "TARGET";
-        _radius = getMarkerSize "TARGET" select 0;
-        _waypoint = _x addWaypoint[_position, _radius];
+    if (_isOnlyAI) then {
+        _waypoint = _x addWaypoint[targetPosition, targetSize];
         _waypoint setWaypointSpeed "FULL";
         _waypoint setWaypointBehaviour "COMBAT";
         _waypoint setWaypointType "HOLD";
-
     };
 
 } forEach allGroups;
