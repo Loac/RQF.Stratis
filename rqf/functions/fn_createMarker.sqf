@@ -61,13 +61,13 @@ _marker = createMarker [_markerName, _markerPos];
     _value = _x select 1;
 
     switch (_name) do {
-        case "shape": { _marker setMarkerShape _value; };
-        case "size": { _marker setMarkerSize _value; };
-        case "type": { _marker setMarkerType _value; };
-        case "brush": { _marker setMarkerBrush _value; };
-        case "dir": { _marker setMarkerDir _value; };
-        case "color": { _marker setMarkerColor _value; };
-        case "text": { _marker setMarkerText _value; };
+        case "shape": { _marker setMarkerShape _value };
+        case "size": { _marker setMarkerSize _value };
+        case "type": { _marker setMarkerType _value };
+        case "brush": { _marker setMarkerBrush _value };
+        case "dir": { _marker setMarkerDir _value };
+        case "color": { _marker setMarkerColor _value };
+        case "text": { _marker setMarkerText _value };
     };
 } foreach _params;
 

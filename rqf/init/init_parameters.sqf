@@ -3,7 +3,7 @@
         Dmitry Loac.
 
     Description:
-        Load params form config file.
+        Load parameters from config file.
  */
 
 private [

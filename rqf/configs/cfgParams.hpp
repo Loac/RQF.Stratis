@@ -1,20 +1,38 @@
 class Params
 {
-    class brifingTime
+    class targetSize
     {
-        title = "Brifing time";
-        values[] = {0,2,5,10};
-        texts[] = {"zero","two","five","ten"};
-        default = 5;
-        code = "brifingTime = %1";
+        title = "Target size";
+        values[] = { 10, 50, 100, 150, 200 };
+        texts[] = { "10", "50", "100", "150", "200" };
+        default = 50;
+        code = "targetSize = %1";
     };
 
-    class brifingTime1
+    class targetDistance
     {
-        title = "Brifing time1";
-        values[] = {0,2,5,10};
-        texts[] = {"zero","two","five","ten"};
-        default = 5;
-        code = "brifingTime = %1";
+        title = "Target distance";
+        values[] = { 100, 200, 300, 500, 600 };
+        texts[] = { "100", "200", "300", "400", "500", "600" };
+        default = 100;
+        code = "targetDistance = %1";
+    };
+
+    class sideDeviation
+    {
+        title = "Side deviation";
+        values[] = { 0, 50, 100, 200 };
+        texts[] = { "0", "50", "100", "200" };
+        default = 50;
+        code = "targetDistance = %1";
+    };
+
+    class sideTimer
+    {
+        title = "Hold time positions";
+        values[] = { 30, 60, 90, 120 };
+        texts[] = { "00:30", "01:00", "01:30", "02:00" };
+        default = 30;
+        code = "blueTimer = %1; redTimer = %1;";
     };
 };

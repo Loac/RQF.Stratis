@@ -20,6 +20,8 @@ sideDeviation = 40;
 blueTimer = 30;
 redTimer = 30;
 
+// Public variables.
+
 // Позиция цели.
 targetPosition = [];
 
