@@ -35,4 +35,20 @@ class Params
         default = 30;
         code = "blueTimer = %1; redTimer = %1;";
     };
+
+    class randomWeather {
+        title = "Random weather";
+        values[] = { true, false };
+        texts[] = { "Yes", "No" };
+        default = false;
+        code = "randomWeather = %1";
+    };
+
+    class randomDayTime {
+        title = "Random time of day";
+        values[] = { true, false };
+        texts[] = { "Yes", "No" };
+        default = false;
+        code = "randomDayTime = %1";
+    };
 };

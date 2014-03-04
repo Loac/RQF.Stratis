@@ -16,7 +16,7 @@
  */
 
 {
-  publicVariable _this;
+    publicVariable _this;
 } forEach _this;
 
 // or.
