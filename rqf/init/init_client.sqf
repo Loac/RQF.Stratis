@@ -32,7 +32,7 @@ sleep 0.01;
 _camera = "camera" camCreate (position player);
 _camera cameraEffect ["internal", "BACK"];
 _camera camCommit 0;
-cutText ["A long time ago in a galaxy far,\nfar away...", "BLACK FADED", 120];
+cutText ["Please, stand by.", "BLACK FADED", 120];
 
 // Radio off.
 enableRadio false;

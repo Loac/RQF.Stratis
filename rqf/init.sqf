@@ -114,6 +114,8 @@ if (not isDedicated) then {
 // ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
 
 // Посмотреть другие миссии.
+    // https://www.dropbox.com/s/eh0as3bo0oqmvql/wog_140_Defence_Atira_9f.Altis.zip
+// Проверить постановку маркеров для JIP пользователей.
 // init_client - switch (side player) do { - после смерти, side возвращает сторону граждансикх.
     // Заменить на side (group player);
 // Попробовать заменить waitUntil на onEachFrame, там где не нужно условие для выхода из цикла.
@@ -122,6 +124,7 @@ if (not isDedicated) then {
     // https://community.bistudio.com/wiki/ArmA_3:_Event_Handlers
     // setVariable ['startMission', true, true];
 // Триггеры на смерть бойцов с одной стороны.
+    // https://www.dropbox.com/s/knt79565bel9hsf/losses.zip Zealot Scripts
     // Попробовать сделть подсчет живых при помощи player addEventHandler ["Killed"], а не бесконечного пересчета. игроков.
 // init_params заменить цикл на for.
 // Проверить синхронизацию JIP.
@@ -129,6 +132,10 @@ if (not isDedicated) then {
 // Проверить как отработает удаленно setDammage
     // https://community.bistudio.com/wiki/setDammage
 // Переместить камеру к таргету.
+// Создание задания.
+   // http://arma3.ru/forums/topic/2402-sozdat-zadanie/
+// Ожидание входа игрока в игру
+   // waitUntil { player == player && time > 0 };
 // Параметры.
 // Постановка задачи.
 // Локализация.
@@ -138,3 +145,7 @@ if (not isDedicated) then {
 // Свой фризтайм.
 // Изображения.
 // Установить тип миссии.
+// Телепорт группами.
+    // После телепорта группы, поставить на нее маркер.
+// Показывать ники союзников
+    // www.dropbox.com/s/si233oug5vd3tz7/zlt_playertags.sqf
