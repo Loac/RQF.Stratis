@@ -28,14 +28,14 @@ private [
     "_playableMarkers"
 ];
 
-// Количество попыток найти позицию.
+// Count attempts for find positions.
 _tryForPosition = 10;
 
-// Флаги готовности сторон.
+// Flag for side by position ready.
 _blueReady = false;
 _redReady = false;
 
-// Найти все маркеры, в которых возможна игра.
+// Find all zone markers.
 _playableMarkers = [] call rqf_fnc_getPlayableMarkers;
 
 // TODO: Добавить ограничение на количество попыток смены маркеров.

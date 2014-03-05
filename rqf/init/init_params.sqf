@@ -12,6 +12,8 @@ private [
 
 _index = 0;
 
+
+// for "_index" from 0 to count configName (missionConfigFile >> "Params") {};
 {
     _name = configName ((missionConfigFile >> "Params") select _index);
 

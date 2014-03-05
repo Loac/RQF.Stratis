@@ -12,16 +12,16 @@
  */
 
 private [
-    "_playableMarkers",
+    "_zoneMarkers",
     "_marker"
 ];
 
 // Delete playable markers.
-_playableMarkers = [] call rqf_fnc_getPlayableMarkers;
+_zoneMarkers = [] call rqf_fnc_getZoneMarkers;
 
 {
     deleteMarker _x;
-} forEach _playableMarkers;
+} forEach _zoneMarkers;
 
 // Set place marker for target.
 _marker = ["TARGET", targetPosition, [["shape", "ELLIPSE"], ["size", [targetSize, targetSize]]]] call rqf_fnc_createMarker;

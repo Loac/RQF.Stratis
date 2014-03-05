@@ -114,12 +114,15 @@ if (not isDedicated) then {
 // ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
 
 // Посмотреть другие миссии.
+// init_client - switch (side player) do { - после смерти, side возвращает сторону граждансикх.
+    // Заменить на side (group player);
 // Попробовать заменить waitUntil на onEachFrame, там где не нужно условие для выхода из цикла.
 // Разобраться с public переменными, не думаю, что постоянно необходимо использовать publicVariable.
     // addPublicVariableEventHandler - вроде бы должен отправлять переменную всем, при ее изменении.
     // https://community.bistudio.com/wiki/ArmA_3:_Event_Handlers
     // setVariable ['startMission', true, true];
 // Триггеры на смерть бойцов с одной стороны.
+// init_params заменить цикл на for.
 // Проверить синхронизацию JIP.
     // Например этим https://community.bistudio.com/wiki/setFog
 // Проверить как отработает удаленно setDammage
@@ -133,3 +136,4 @@ if (not isDedicated) then {
 // Случайное время суток.
 // Свой фризтайм.
 // Изображения.
+// Установить тип миссии.

@@ -11,18 +11,18 @@
 
 private [
     "_camera",
-    "_playableMarkers"
+    "_zoneMarkers"
 ];
 
 // Disable saving.
 enableSaving [false, false];
 
 // Delete playable markers.
-_playableMarkers = [] call rqf_fnc_getPlayableMarkers;
+_zoneMarkers = [] call rqf_fnc_getZoneMarkers;
 
 {
     deleteMarker _x;
-} forEach _playableMarkers;
+} forEach _zoneMarkers;
 
 sleep 0.01;
 
