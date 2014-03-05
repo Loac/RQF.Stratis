@@ -1,10 +1,7 @@
 /*
-    Author:
-        Dmitry Loac.
-
      Example:
      	_null = [_redPosition, ("RED-" + str(dbgMarkerIndex))] execVM "rqf\helpers\dbgMarker.sqf";
- */
+*/
 
 _markerPos = _this select 0;
 _markerText = _this select 1;

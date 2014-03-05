@@ -52,6 +52,14 @@ class Params
         code = "randomDayTime = %1";
     };
 
+    class paramFog {
+        title = "Fog";
+        values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
+        texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
+        default = 0;
+        code = "randomDayTime = %1";
+    };
+
     class enableCreeps {
         title = "Enable AI";
         values[] = { true, false };

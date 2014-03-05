@@ -100,7 +100,7 @@ if (not isDedicated) then {
     /*
         Magic.
     */
-    waitUntil { not isNull Player and isPlayer Player };
+    // waitUntil { not isNull Player and isPlayer Player };
 
     /*
         Client side procedures.
@@ -110,7 +110,7 @@ if (not isDedicated) then {
     /*
         Development.
     */
-    // _handle = [] execVM "rqf\init\init_devel.sqf";
+    _handle = [] execVM "rqf\init\init_devel.sqf";
 };
 
 // ["bluePosition %1", bluePosition] call BIS_fnc_error;
@@ -137,7 +137,8 @@ if (not isDedicated) then {
 // Случайное время суток.
 // Свой фризтайм.
 // Изображения.
-// Установить тип миссии.
+// Больше разных сообщений в дебрифинг.
+
 
 
 // Проверить финишь миссии после смерти.
