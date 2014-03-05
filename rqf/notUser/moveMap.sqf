@@ -1,4 +1,4 @@
-// disableserialization;
+disableserialization;
 
 openMap [true, false];
 waitUntil { visibleMap };

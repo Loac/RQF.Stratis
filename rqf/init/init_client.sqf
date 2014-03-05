@@ -32,6 +32,7 @@ _zoneMarkers = [] call rqf_fnc_getZoneMarkers;
     deleteMarker _x;
 } forEach _zoneMarkers;
 
+disableserialization;
 _mapDisplay = findDisplay 12;
 _mapCtrl = _mapDisplay displayCtrl 51;
 _mapCtrl ctrlMapAnimAdd [0, 0.1, position player];
