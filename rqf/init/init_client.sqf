@@ -27,6 +27,8 @@ _playableMarkers = [] call rqf_fnc_getPlayableMarkers;
 sleep 0.01;
 
 // Fade out player screen.
+// Try this https://community.bistudio.com/wiki/titleCut
+// And this https://community.bistudio.com/wiki/startLoadingScreen
 _camera = "camera" camCreate (position player);
 _camera cameraEffect ["internal", "BACK"];
 _camera camCommit 0;

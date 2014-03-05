@@ -21,6 +21,8 @@
         redHold
             Flags of side hold positions.
 
+    See:
+        https://community.bistudio.com/wiki/6thSense.eu:EG
  */
 
 // Public variables.
@@ -49,7 +51,7 @@ if (isServer) then {
     /*
         Set parameters.
     */
-    _handle = [] execVM "rqf\init\init_parameters.sqf"; waitUntil { scriptDone _handle };
+    _handle = [] execVM "rqf\init\init_params.sqf"; waitUntil { scriptDone _handle };
 
     /*
         Set spawn and target positions:
@@ -111,7 +113,17 @@ if (not isDedicated) then {
 // ["bluePosition %1", bluePosition] call BIS_fnc_error;
 // ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
 
+// Посмотреть другие миссии.
+// Попробовать заменить waitUntil на onEachFrame, там где не нужно условие для выхода из цикла.
+// Разобраться с public переменными, не думаю, что постоянно необходимо использовать publicVariable.
+    // addPublicVariableEventHandler - вроде бы должен отправлять переменную всем, при ее изменении.
+    // https://community.bistudio.com/wiki/ArmA_3:_Event_Handlers
+    // setVariable ['startMission', true, true];
 // Триггеры на смерть бойцов с одной стороны.
+// Проверить синхронизацию JIP.
+    // Например этим https://community.bistudio.com/wiki/setFog
+// Проверить как отработает удаленно setDammage
+    // https://community.bistudio.com/wiki/setDammage
 // Переместить камеру к таргету.
 // Параметры.
 // Постановка задачи.
