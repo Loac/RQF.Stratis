@@ -122,6 +122,7 @@ if (not isDedicated) then {
     // https://community.bistudio.com/wiki/ArmA_3:_Event_Handlers
     // setVariable ['startMission', true, true];
 // Триггеры на смерть бойцов с одной стороны.
+    // Попробовать сделть подсчет живых при помощи player addEventHandler ["Killed"], а не бесконечного пересчета. игроков.
 // init_params заменить цикл на for.
 // Проверить синхронизацию JIP.
     // Например этим https://community.bistudio.com/wiki/setFog
