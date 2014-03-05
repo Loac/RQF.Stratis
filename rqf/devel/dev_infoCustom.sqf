@@ -2,6 +2,19 @@ player enableFatigue false;
 player allowDamage false;
 
 waitUntil {
-    hintSilent format ["blueTimer: %1 \nblueHold: %2 \nredTimer: %3 \nredHold: %4", blueTimer, blueHold, redTimer, redHold];
+    _hint = "";
+    _hint = _hint + "Blue timer (hold): %1 (%2) \n";
+    _hint = _hint + "Red timer (hold): %3 (%4) \n";
+    _hint = _hint + "Ratio (B:R): %5:%6 \n";
+
+    hintSilent format [_hint,
+        blueTimer,
+        blueHold,
+        redTimer,
+        redHold,
+        blueUnits,
+        redUnits
+    ];
+
     sleep 0.5;
 };

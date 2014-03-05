@@ -20,6 +20,10 @@
         blueHold
         redHold
             Flags of side hold positions.
+        blueUnits
+        redUnits
+        blueRatio
+        redRatio
 
     See:
         https://community.bistudio.com/wiki/6thSense.eu:EG
@@ -47,6 +51,10 @@ if (isServer) then {
     // Flags of side hold positions.
     blueHold = false;
     redHold = false;
+
+    // Count units by side.
+    blueUnits = 0;
+    redUnits = 0;
 
     /*
         Set parameters.
@@ -100,7 +108,7 @@ if (not isDedicated) then {
     /*
         Magic.
     */
-    // waitUntil { not isNull Player and isPlayer Player };
+    waitUntil { not isNull Player and isPlayer Player };
 
     /*
         Client side procedures.
@@ -110,14 +118,14 @@ if (not isDedicated) then {
     /*
         Development.
     */
-    _handle = [] execVM "rqf\init\init_devel.sqf";
+    if (not isMultiplayer) then {
+        _handle = [] execVM "rqf\init\init_devel.sqf";
+    }
 };
 
 // ["bluePosition %1", bluePosition] call BIS_fnc_error;
 // ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
 
-// Посмотреть другие миссии.
-// Попробовать заменить waitUntil на onEachFrame, там где не нужно условие для выхода из цикла.
 // Разобраться с public переменными, не думаю, что постоянно необходимо использовать publicVariable.
     // addPublicVariableEventHandler - вроде бы должен отправлять переменную всем, при ее изменении.
 
@@ -138,6 +146,7 @@ if (not isDedicated) then {
 // Свой фризтайм.
 // Изображения.
 // Больше разных сообщений в дебрифинг.
+// Спрятать позицию игрока на карте.
 
 
 

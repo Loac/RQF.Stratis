@@ -8,7 +8,7 @@ class CfgFunctions
 
 	        class createMarker { description = "Creates marker with given params."; };
 	        class getZoneMarkers { description = "Find all palyable markers."; };
-	        class updateRatio123 { description = "Update ratio forces."; };
+	        class updateRatio { description = "Update ratio forces."; };
 	    };
 	};
 };

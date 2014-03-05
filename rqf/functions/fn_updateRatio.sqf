@@ -14,14 +14,15 @@ redUnits = 0;
 
 {
 	switch (side _x) do {
-		case east: { blueUnits = blueUnits + 1 };
-		case west: { redUnits = redUnits + 1};
+		case west: { blueUnits = blueUnits + 1 };
+		case east: { redUnits = redUnits + 1};
 	};
 
 } forEach allUnits;
 
-blueRatio = blueUnits / redUnits;
-redRatio = redUnits / blueUnits;
+// Ratio by percent for exclude zero divided.
+blueRatio = 100 / blueUnits * redUnits;
+redRatio = 100 / redUnits * blueUnits;
 
 // Return;
 true;

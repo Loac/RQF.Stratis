@@ -25,6 +25,18 @@ private [
 // Disable saving.
 enableSaving [false, false];
 
+// Delete zone markers.
+_zoneMarkers = [] call rqf_fnc_getZoneMarkers;
+
+{
+    deleteMarker _x;
+} forEach _zoneMarkers;
+
+_mapDisplay = findDisplay 12;
+_mapCtrl = _mapDisplay displayCtrl 51;
+_mapCtrl ctrlMapAnimAdd [0, 0.1, position player];
+ctrlMapAnimCommit _mapCtrl;
+
 // Show intro.
 _handle = [] call compile preprocessFileLineNumbers "rqf\init\init_clientIntro.sqf";
 waitUntil { scriptDone _handle };
@@ -40,13 +52,6 @@ _camera camCommit 0;
 
 // Radio off.
 enableRadio false;
-
-// Delete zone markers.
-_zoneMarkers = [] call rqf_fnc_getZoneMarkers;
-
-{
-    deleteMarker _x;
-} forEach _zoneMarkers;
 
 // Wait start mission. Set start positions, teleport and etc.
 waitUntil { startMission && time > 3 };
