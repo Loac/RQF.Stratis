@@ -72,9 +72,9 @@ if (isServer) then {
     _handle = [] execVM "rqf\init\init_positions.sqf";
 
     /*
-        Set arbitr.
+        Set arbiter.
     */
-    _handle = [] execVM "rqf\init\init_arbitrator.sqf";
+    _handle = [] execVM "rqf\init\init_arbiter.sqf";
 
     /*
         Set markers for players.

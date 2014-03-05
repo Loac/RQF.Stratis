@@ -30,6 +30,7 @@ private [
         };
     } forEach units _x;
 
+    // Set random waypoints into target marker.
     if (_isOnlyAI) then {
         _waypoint = _x addWaypoint[targetPosition, targetSize];
         _waypoint setWaypointSpeed "FULL";
