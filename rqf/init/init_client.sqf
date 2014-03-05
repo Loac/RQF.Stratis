@@ -5,6 +5,10 @@
     Description:
         Client side procedures.
 
+    See:
+        https://community.bistudio.com/wiki/titleCut
+        https://community.bistudio.com/wiki/startLoadingScreen
+
     External variables:
         startMission
  */
@@ -17,34 +21,40 @@ private [
 // Disable saving.
 enableSaving [false, false];
 
-// Delete playable markers.
+// Show intro.
+_handle = [] call compile preprocessFileLineNumbers "rqf\init\init_clientIntro.sqf";
+waitUntil { scriptDone _handle };
+
+// Disable player actions.
+// player enablesimulation false;
+
+// Fade out screen.
+cutText ["Please, stand by.", "BLACK FADED", 120];
+_camera = "camera" camCreate (position player);
+_camera cameraEffect ["internal", "BACK"];
+_camera camCommit 0;
+
+// Radio off.
+enableRadio false;
+
+// Delete zone markers.
 _zoneMarkers = [] call rqf_fnc_getZoneMarkers;
 
 {
     deleteMarker _x;
 } forEach _zoneMarkers;
 
-sleep 0.01;
-
-// Fade out player screen.
-// Try this https://community.bistudio.com/wiki/titleCut
-// And this https://community.bistudio.com/wiki/startLoadingScreen
-_camera = "camera" camCreate (position player);
-_camera cameraEffect ["internal", "BACK"];
-_camera camCommit 0;
-cutText ["A long time ago in a galaxy far,\nfar away...", "BLACK FADED", 120];
-
-// Radio off.
-enableRadio false;
-
 // Wait start mission. Set start positions, teleport and etc.
-waitUntil { (startMission && time > 3)  || time > 60 };
+waitUntil { startMission && time > 3 };
 
-// Fade out player screen.
-cutText ["", "BLACK IN", 2];
+// Enable player.
+// player enablesimulation true;
+
+// Fade in screen.
 _camera cameraEffect ["terminate", "BACK"];
 _camera camCommit 0;
 camDestroy _camera;
+cutText ["", "BLACK IN", 2];
 
 // Radio on.
 enableRadio true;
@@ -56,13 +66,13 @@ enableRadio true;
 
         switch (completeMission) do {
             case "blueHoldTarget" : {
-                switch (side player) do {
+                switch (side group player) do {
                     case west: { ["win_blueHoldTarget", true, true] call BIS_fnc_endMission };
                     case east: { ["lose_blueHoldTarget", false, true] call BIS_fnc_endMission };
                 };
             };
             case "redHoldTarget" : {
-                switch (side player) do {
+                switch (side group player) do {
                     case west: { ["lose_redHoldTarget", false, true] call BIS_fnc_endMission };
                     case east: { ["win_redHoldTarget", true, true] call BIS_fnc_endMission };
                 };

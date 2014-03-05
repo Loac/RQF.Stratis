@@ -97,6 +97,10 @@ if (isServer) then {
 };
 
 if (not isDedicated) then {
+    /*
+        Magic.
+    */
+    waitUntil { not isNull Player and isPlayer Player };
 
     /*
         Client side procedures.
@@ -104,23 +108,19 @@ if (not isDedicated) then {
     _handle = [] execVM "rqf\init\init_client.sqf";
 
     /*
-        Development magic.
+        Development.
     */
-    _handle = [] execVM "rqf\init\init_devel.sqf";
+    // _handle = [] execVM "rqf\init\init_devel.sqf";
 };
 
-// If (!IsServer) then {WaitUntil {!IsNull Player And IsPlayer Player};};
 // ["bluePosition %1", bluePosition] call BIS_fnc_error;
 // ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
 
 // Посмотреть другие миссии.
-// init_client - switch (side player) do { - после смерти, side возвращает сторону граждансикх.
-    // Заменить на side (group player);
 // Попробовать заменить waitUntil на onEachFrame, там где не нужно условие для выхода из цикла.
 // Разобраться с public переменными, не думаю, что постоянно необходимо использовать publicVariable.
     // addPublicVariableEventHandler - вроде бы должен отправлять переменную всем, при ее изменении.
-    // https://community.bistudio.com/wiki/ArmA_3:_Event_Handlers
-    // setVariable ['startMission', true, true];
+
 // Триггеры на смерть бойцов с одной стороны.
     // Попробовать сделть подсчет живых при помощи player addEventHandler ["Killed"], а не бесконечного пересчета. игроков.
 // init_params заменить цикл на for.
@@ -138,3 +138,8 @@ if (not isDedicated) then {
 // Свой фризтайм.
 // Изображения.
 // Установить тип миссии.
+
+
+// Проверить финишь миссии после смерти.
+            // init_client - switch (side player) do { - после смерти, side возвращает сторону граждансикх.
+            // Заменить на side (group player);
