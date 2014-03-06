@@ -129,8 +129,6 @@ if (not isDedicated) then {
 // Посмотреть другие миссии.
     // https://www.dropbox.com/s/eh0as3bo0oqmvql/wog_140_Defence_Atira_9f.Altis.zip
 // Проверить постановку маркеров для JIP пользователей.
-// init_client - switch (side player) do { - после смерти, side возвращает сторону граждансикх.
-    // Заменить на side (group player);
 // Попробовать заменить waitUntil на onEachFrame, там где не нужно условие для выхода из цикла.
 
 // Разобраться с public переменными, не думаю, что постоянно необходимо использовать publicVariable.

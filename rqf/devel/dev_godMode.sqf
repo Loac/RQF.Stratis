@@ -1,3 +1,11 @@
+/*
+    Description:
+        Switch god mode.
+
+    Example:
+        _null = player addAction ["God mode", "rqf\devel\dev_godMode.sqf"];
+*/
+
 devGodMode = not devGodMode;
 
 player enableFatigue not devGodMode;

@@ -1,4 +1,4 @@
 class Header
 {
-	gameType = SC;
+    gameType = SC;
 };

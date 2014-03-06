@@ -25,6 +25,8 @@ waitUntil {
         completeMission = "blueDominate";
     };
 
+    // Check trigger "TARGET" state.
+
     // If blue hold position, but red not.
     if (blueHold && not redHold) then {
         blueTimer = blueTimer - 1;
@@ -45,6 +47,7 @@ waitUntil {
         };
     };
 
+    // Wait while completeMission is empty.
     not (completeMission == "");
 };
 

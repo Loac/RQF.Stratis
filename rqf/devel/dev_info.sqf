@@ -1,13 +1,51 @@
-player enableFatigue false;
-player allowDamage false;
+/*
+    Author:
+        Dmitry Loac.
 
-while {true} do {
-    mypos = getPosATL player;
-    mydir = getDir player;
-    myvelo = velocity player;
-    unitcount = count allUnits;
-    histarget = assignedTarget cursorTarget;
+    Description:
+        Switch god mode.
 
-    hintSilent format ["PositionATL:\n%1\n\nAzimuth:\n%2\n\nCursorTarget:\n%3\n\nVelocity:\n%4\n\nTime:\n%5\n\nAliveUnitCount:\n%6\n\nAssignedTarget:\n%7\n\nWindStr/WindDir:\n%8/%9\n",mypos,mydir,cursortarget,myvelo,daytime,unitcount,histarget,windStr,windDir];
-    sleep 0.2;
-};
+    See:
+        getPosATL
+        getDir
+        velocity
+        assignedTarget cursorTarget
+        dayTime
+        windStr
+        windDir
+
+    Example:
+        _null = player addAction ["God mode", "rqf\devel\dev_info.sqf"];
+*/
+
+private [
+    "_hint",
+    "_strings"
+];
+
+// Switch variable.
+devShowInfo = not devShowInfo;
+
+waitUntil {
+    // Strings.
+    _hint = "";
+    _strings = [
+        ["Blue timer (hold): %1 (%2)", [blueTimer, blueHold]],
+        ["Red timer (hold): %1 (%2)", [redTimer, redHold]],
+        ["Ratio (B:R): %1:%2", [blueUnits, redUnits]],
+    ];
+
+    // Make debug info.
+    {
+        _hint = _hint + format[_x select 0, _x select 1] + "\n";
+    } forEach _strings;
+
+    // Show hint.
+    hintSilent _hint;
+
+    // Wait.
+    sleep 0.5;
+
+    // Show info while devShowInfo == true.
+    not devShowInfo;
+}

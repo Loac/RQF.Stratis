@@ -2,8 +2,11 @@
     Author:
         Dmitry Loac.
 
+    Description:
+        Teleport red team to marker "TARGET".
+
      Example:
-      	_null = player addAction ["Teleport", "rqf\helpers\dbgMoveEnemy.sqf"];
+      	_null = player addAction ["Teleport red team", "rqf\devel\dev_unitsTeleport.sqf"];
  */
 
 {
