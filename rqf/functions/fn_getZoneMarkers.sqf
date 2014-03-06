@@ -27,7 +27,7 @@ _zoneMarkers = [];
         _zoneMarkers = _zoneMarkers + [_x];
     };
 
-} foreach _allMarkers;
+} forEach _allMarkers;
 
 // Return.
 _zoneMarkers;
