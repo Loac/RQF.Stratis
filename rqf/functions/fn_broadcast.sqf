@@ -13,40 +13,22 @@
         redTimer
         bluePosition
         redPosition
+
+    Example:
+        _null = [["missionComplete", true], ["blueTimer", 0]] call rqf_fnc_broadcast;
 */
 
-// {
-//      publicVariable _this;
-// } forEach _this;
-//
-// // or.
-//
-// publicVariable "blueTimer";
-// publicVariable "redTimer";
-// publicVariable "bluePosition";
-// publicVariable "redPosition";
-
-
-// _null = [["missionComplete", true], ["blueTimer", 0]] call rqf_fnc_broadcast;
-
 private [
-    "_variables",
     "_name",
     "_value"
 ];
-
-_variables = _this select 0;
-
-hint format ["%1", _variables];
 
 {
     _name = _x select 0;
     _value = _x select 1;
 
-    // Возможно получится сделать переменную глобальной через третий параметр.
     missionNamespace setVariable [_name, _value];
     publicVariable _name;
-
-} forEach _variables;
+} forEach _this;
 
 true;
