@@ -36,7 +36,7 @@ _blueReady = false;
 _redReady = false;
 
 // Find all zone markers.
-_playableMarkers = [] call rqf_fnc_getPlayableMarkers;
+_playableMarkers = [] call rqf_fnc_getZoneMarkers;
 
 // TODO: Добавить ограничение на количество попыток смены маркеров.
 // TODO: Добавить проверку на присутсвие игровых ("ColorOrange") маркеров.

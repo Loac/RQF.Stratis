@@ -1,5 +1,3 @@
-// usage: _null = [] execvm "rqf\helpers\dbgInfoCustom.sqf"
-
 player enableFatigue false;
 player allowDamage false;
 

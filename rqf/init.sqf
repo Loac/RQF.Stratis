@@ -20,6 +20,10 @@
         blueHold
         redHold
             Flags of side hold positions.
+        blueUnits
+        redUnits
+        blueRatio
+        redRatio
 
     See:
         https://community.bistudio.com/wiki/6thSense.eu:EG
@@ -47,6 +51,10 @@ if (isServer) then {
     // Flags of side hold positions.
     blueHold = false;
     redHold = false;
+
+    // Count units by side.
+    blueUnits = 0;
+    redUnits = 0;
 
     /*
         Set parameters.
@@ -97,6 +105,10 @@ if (isServer) then {
 };
 
 if (not isDedicated) then {
+    /*
+        Magic.
+    */
+    waitUntil { not isNull Player and isPlayer Player };
 
     /*
         Client side procedures.
@@ -104,12 +116,13 @@ if (not isDedicated) then {
     _handle = [] execVM "rqf\init\init_client.sqf";
 
     /*
-        Development magic.
+        Development.
     */
-    _handle = [] execVM "rqf\init\init_devel.sqf";
+    if (not isMultiplayer) then {
+        _handle = [] execVM "rqf\init\init_devel.sqf";
+    }
 };
 
-// If (!IsServer) then {WaitUntil {!IsNull Player And IsPlayer Player};};
 // ["bluePosition %1", bluePosition] call BIS_fnc_error;
 // ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
 
@@ -119,10 +132,10 @@ if (not isDedicated) then {
 // init_client - switch (side player) do { - после смерти, side возвращает сторону граждансикх.
     // Заменить на side (group player);
 // Попробовать заменить waitUntil на onEachFrame, там где не нужно условие для выхода из цикла.
+
 // Разобраться с public переменными, не думаю, что постоянно необходимо использовать publicVariable.
     // addPublicVariableEventHandler - вроде бы должен отправлять переменную всем, при ее изменении.
-    // https://community.bistudio.com/wiki/ArmA_3:_Event_Handlers
-    // setVariable ['startMission', true, true];
+
 // Триггеры на смерть бойцов с одной стороны.
     // https://www.dropbox.com/s/knt79565bel9hsf/losses.zip Zealot Scripts
     // Попробовать сделть подсчет живых при помощи player addEventHandler ["Killed"], а не бесконечного пересчета. игроков.
@@ -144,8 +157,16 @@ if (not isDedicated) then {
 // Случайное время суток.
 // Свой фризтайм.
 // Изображения.
-// Установить тип миссии.
 // Телепорт группами.
     // После телепорта группы, поставить на нее маркер.
 // Показывать ники союзников
     // www.dropbox.com/s/si233oug5vd3tz7/zlt_playertags.sqf
+
+// Больше разных сообщений в дебрифинг.
+// Спрятать позицию игрока на карте.
+
+
+
+// Проверить финишь миссии после смерти.
+            // init_client - switch (side player) do { - после смерти, side возвращает сторону граждансикх.
+            // Заменить на side (group player);

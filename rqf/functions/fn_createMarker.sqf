@@ -68,6 +68,7 @@ _marker = createMarker [_markerName, _markerPos];
         case "dir": { _marker setMarkerDir _value };
         case "color": { _marker setMarkerColor _value };
         case "text": { _marker setMarkerText _value };
+        case "alpha": { _marker setMarkerAlpha _value };
     };
 } foreach _params;
 

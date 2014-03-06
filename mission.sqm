@@ -116,20 +116,8 @@ class Mission
 	};
 	class Markers
 	{
-		items=4;
+		items=3;
 		class Item0
-		{
-			position[]={2008.4865,5.7311845,5670.5532};
-			name="zone1";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=100;
-			b=100;
-			drawBorder=1;
-		};
-		class Item1
 		{
 			position[]={4697.0391,103.74242,5720.1191};
 			name="playableZone_3";
@@ -139,7 +127,7 @@ class Mission
 			a=2200;
 			b=2200;
 		};
-		class Item2
+		class Item1
 		{
 			position[]={2583.0837,80.615952,1416.0605};
 			name="playableZone_1";
@@ -149,7 +137,7 @@ class Mission
 			a=1000;
 			b=1000;
 		};
-		class Item3
+		class Item2
 		{
 			position[]={3341.9646,118.67789,3411.0054};
 			name="playableZone_2";
