@@ -9,6 +9,14 @@
         redHold
 */
 
+private [
+    "_winner",
+    "_scenario"
+];
+
+_winner = sideLogic;
+_scenario = "";
+
 waitUntil {
     sleep 1;
 
@@ -17,12 +25,14 @@ waitUntil {
 
     // If blue dominate. Ratios in percent.
     if (redRatio < 51) then {
-        completeMission = "redDominate";
+        _scenario = "blueDominate";
+        _winner = west;
     };
 
     // // If red dominate.
     if (blueRatio < 51) then {
-        completeMission = "blueDominate";
+        _scenario = "redDominate";
+        _winner = east;
     };
 
     // Check trigger "TARGET" state.
@@ -33,7 +43,8 @@ waitUntil {
 
         // Blue hold position.
         if (blueTimer < 0) then {
-            completeMission = "blueHoldTarget";
+            _scenario = "blueHoldTarget";
+            _winner = west;
         };
     };
 
@@ -43,13 +54,15 @@ waitUntil {
 
         // Red hold position.
         if (redTimer < 0) then {
-            completeMission = "redHoldTarget";
+            _scenario = "redHoldTarget";
+            _winner = east;
         };
     };
 
-    // Wait while completeMission is empty.
-    not (completeMission == "");
+    // Wait while _winner is not defined.
+    not (_winner == sideLogic);
 };
 
 // Send variable.
-publicVariable 'completeMission';
+//publicVariable '_scenario';
+[[_winner, _scenario], "rqf_fnc_endMission"] spawn BIS_fnc_MP;

@@ -7,6 +7,9 @@
         redUnits
         blueRatio
         redRatio
+
+    See:
+        player addEventHandler ["Killed"]
 */
 
 blueUnits = 0;

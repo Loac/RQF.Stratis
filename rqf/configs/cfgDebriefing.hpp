@@ -1,6 +1,6 @@
 class CfgDebriefing
 {
-    class win_blueHoldTarget
+    class west_blueHoldTarget
     {
         title = $STR_RQF_win;
         subtitle = $STR_RQF_blueHoldTarget;
@@ -10,7 +10,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class lose_blueHoldTarget
+    class east_blueHoldTarget
     {
         title = $STR_RQF_lose;
         subtitle = $STR_RQF_blueHoldTarget;
@@ -20,17 +20,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class win_redHoldTarget
-    {
-        title = $STR_RQF_win;
-        subtitle = $STR_RQF_redHoldTarget;
-        description = "Yippee Ki Yay, motherfuckers.";
-        pictureBackground = "";
-        picture = "";
-        pictureColor[] = { 0, 0, 1, 1 };
-    };
-
-    class lose_redHoldTarget
+    class west_redHoldTarget
     {
         title = $STR_RQF_lose;
         subtitle = $STR_RQF_redHoldTarget;
@@ -40,8 +30,17 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
+    class east_redHoldTarget
+    {
+        title = $STR_RQF_win;
+        subtitle = $STR_RQF_redHoldTarget;
+        description = "Yippee Ki Yay, motherfuckers.";
+        pictureBackground = "";
+        picture = "";
+        pictureColor[] = { 0, 0, 1, 1 };
+    };
 
-    class win_blueDominate
+    class west_blueDominate
     {
         title = $STR_RQF_win;
         subtitle = $STR_RQF_blueDominate;
@@ -51,7 +50,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class lose_blueDominate
+    class east_blueDominate
     {
         title = $STR_RQF_lose;
         subtitle = $STR_RQF_blueDominate;
@@ -61,9 +60,9 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class win_redDominate
+    class west_redDominate
     {
-        title = $STR_RQF_win;
+        title = $STR_RQF_lose;
         subtitle = $STR_RQF_redDominate;
         description = "";
         pictureBackground = "";
@@ -71,9 +70,9 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class lose_redDominate
+    class east_redDominate
     {
-        title = $STR_RQF_lose;
+        title = $STR_RQF_win;
         subtitle = $STR_RQF_redDominate;
         description = "";
         pictureBackground = "";

@@ -11,6 +11,7 @@
     See:
         playerSide
         side group player
+        BIS_fnc_MP
 */
 
 "completeMission" addPublicVariableEventHandler {

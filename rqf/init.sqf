@@ -9,8 +9,6 @@
             Distance to target.
         sideDeviation
             Deviations of start positions.
-        completeMission
-            Flag of mission complete.
         bluePosition
         redPosition
             Coordinates of side start.
@@ -24,15 +22,12 @@
         redUnits
         blueRatio
         redRatio
+        startMission
+            Flag to start mission.
 
     See:
         https://community.bistudio.com/wiki/6thSense.eu:EG
 */
-
-// Public variables.
-
-// Flag of mission complete.
-completeMission = "";
 
 if (isServer) then {
     // Position of target.
@@ -128,10 +123,6 @@ if (not isDedicated) then {
 
 // Триггеры на смерть бойцов с одной стороны.
     // https://www.dropbox.com/s/knt79565bel9hsf/losses.zip Zealot Scripts
-    // Попробовать сделть подсчет живых при помощи player addEventHandler ["Killed"], а не бесконечного пересчета. игроков.
-
-// Проверить как отработает удаленно setDammage
-    // https://community.bistudio.com/wiki/setDammage
 
 // Создание задания.
    // http://arma3.ru/forums/topic/2402-sozdat-zadanie/

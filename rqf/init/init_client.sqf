@@ -71,8 +71,8 @@ enableRadio true;
 
 // Wait misson complete.
 if (isMultiplayer) then {
-    _null = [] execVM "rqf\init\init_clientOutro.sqf";
+    // _null = [] execVM "rqf\init\init_clientOutro.sqf";
 }
 else {
-    _null = [] execVM "rqf\init\init_clientOutroSingle.sqf";
+    // _null = [] execVM "rqf\init\init_clientOutroSingle.sqf";
 }
