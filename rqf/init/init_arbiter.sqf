@@ -63,6 +63,5 @@ waitUntil {
     not (_winner == sideLogic);
 };
 
-// Send variable.
-//publicVariable '_scenario';
+// End of misson.
 [[_winner, _scenario], "rqf_fnc_endMission"] spawn BIS_fnc_MP;

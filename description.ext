@@ -5,6 +5,8 @@ onLoadName = "RQF";
 onLoadMission = "Good luck";
 author = "Loac";
 
+showGPS = 0;
+
 #include "rqf\configs\cfgHeader.hpp"
 #include "rqf\configs\cfgParams.hpp"
 #include "rqf\configs\cfgFunctions.hpp"

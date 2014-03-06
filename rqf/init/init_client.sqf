@@ -6,12 +6,12 @@
         Client side procedures.
 
     See:
-        https://community.bistudio.com/wiki/titleCut
+        titleCut
         titleText
         titleRsc
         startLoadingScreen
         BIS_fnc_dynamicText
-
+        enablesimulation
 
     External variables:
         startMission
@@ -42,9 +42,6 @@ ctrlMapAnimCommit _mapCtrl;
 _handle = [] call compile preprocessFileLineNumbers "rqf\init\init_clientIntro.sqf";
 waitUntil { scriptDone _handle };
 
-// Disable player actions.
-// player enablesimulation false;
-
 // Fade out screen.
 cutText ["Please, stand by.", "BLACK FADED", 120];
 _camera = "camera" camCreate (position player);
@@ -57,9 +54,6 @@ enableRadio false;
 // Wait start mission. Set start positions, teleport and etc.
 waitUntil { startMission && time > 3 };
 
-// Enable player.
-// player enablesimulation true;
-
 // Fade in screen.
 _camera cameraEffect ["terminate", "BACK"];
 _camera camCommit 0;
@@ -68,11 +62,3 @@ cutText ["", "BLACK IN", 2];
 
 // Radio on.
 enableRadio true;
-
-// Wait misson complete.
-if (isMultiplayer) then {
-    // _null = [] execVM "rqf\init\init_clientOutro.sqf";
-}
-else {
-    // _null = [] execVM "rqf\init\init_clientOutroSingle.sqf";
-}

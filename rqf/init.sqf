@@ -118,9 +118,6 @@ if (not isDedicated) then {
     // Например этим https://community.bistudio.com/wiki/setFog
     // Постановку маркеров для JIP пользователей.
 
-// Разобраться с public переменными, не думаю, что постоянно необходимо использовать publicVariable.
-    // addPublicVariableEventHandler - вроде бы должен отправлять переменную всем, при ее изменении.
-
 // Триггеры на смерть бойцов с одной стороны.
     // https://www.dropbox.com/s/knt79565bel9hsf/losses.zip Zealot Scripts
 
