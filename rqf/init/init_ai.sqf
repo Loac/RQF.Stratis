@@ -12,7 +12,7 @@
     See:
         https://community.bistudio.com/wiki/Mission_Editor:_Waypoints
         https://community.bistudio.com/wiki/setWaypointType
- */
+*/
 
 private [
     "_position",

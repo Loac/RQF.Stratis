@@ -7,7 +7,7 @@
 
     Example:
         _null = [10] execVM "rqf\devel\dev_jump.sqf";
- */
+*/
 
 _distance = _this select 0;
 

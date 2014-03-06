@@ -7,7 +7,7 @@
 
      Example:
       	_null = player addAction ["Teleport red team", "rqf\devel\dev_unitsTeleport.sqf"];
- */
+*/
 
 {
     switch (side _x) do {

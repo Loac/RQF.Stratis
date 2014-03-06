@@ -7,7 +7,7 @@
         redTimer
         blueHold
         redHold
- */
+*/
 
 waitUntil {
     sleep 1;

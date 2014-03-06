@@ -27,7 +27,7 @@
 
     See:
         https://community.bistudio.com/wiki/6thSense.eu:EG
- */
+*/
 
 // Public variables.
 

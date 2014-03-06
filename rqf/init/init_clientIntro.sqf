@@ -8,14 +8,13 @@ private [
     "_colorEast"
 ];
 
-
 // Set side colors.
 _colorWest = WEST call BIS_fnc_sideColor;
 _colorEast = EAST call BIS_fnc_sideColor;
 
 // Set transparency for colors.
 {
-    _x set [3, 0.73]
+    _x set [3, 0.73];
 } forEach [_colorWest, _colorEast];
 
 [

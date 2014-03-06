@@ -17,7 +17,7 @@
         targetPosition
         bluePosition
         redPosition
- */
+*/
 
 private [
     "_blueDegrees",

@@ -7,7 +7,7 @@
 
     Example:
         _zoneMarkers = [] execVM "rqf\functions\fn_getPlayableMarkers.sqf";
- */
+*/
 
 private [
     "_allMarkers",

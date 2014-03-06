@@ -9,10 +9,9 @@
         targetPosition
         bluePosition
         redPosition
- */
+*/
 
 private [
-    "_zoneMarkers",
     "_marker"
 ];
 

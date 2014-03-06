@@ -15,7 +15,7 @@
 
     External variables:
         startMission
- */
+*/
 
 private [
     "_camera",

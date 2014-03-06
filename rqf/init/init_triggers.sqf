@@ -2,17 +2,20 @@
     Author:
         Dmitry Loac.
 
+    Description:
+        Set triggers.
+
     External variables:
         targetPosition
         targetSize
 
     See:
-    	https://community.bistudio.com/wiki/setTriggerActivation
-    	https://community.bistudio.com/wiki/setTriggerStatements
- */
+      https://community.bistudio.com/wiki/setTriggerActivation
+      https://community.bistudio.com/wiki/setTriggerStatements
+*/
 
 private [
-	"_trigger"
+    "_trigger"
 ];
 
 // Check blue forces in target zone.

@@ -7,7 +7,7 @@
         redUnits
         blueRatio
         redRatio
- */
+*/
 
 blueUnits = 0;
 redUnits = 0;
