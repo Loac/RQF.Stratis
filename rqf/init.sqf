@@ -35,12 +35,6 @@
 completeMission = "";
 
 if (isServer) then {
-    // Flag to start mission.
-    startMission = false;
-
-    // Send variable.
-    publicVariable "startMission";
-
     // Position of target.
     targetPosition = [];
 
@@ -60,6 +54,9 @@ if (isServer) then {
         Set parameters.
     */
     _handle = [] execVM "rqf\init\init_params.sqf"; waitUntil { scriptDone _handle };
+
+    // Set and broadcast flag start mission and targetDistance value.
+    _null = [["startMission", false], ["targetDistance"]] call rqf_fnc_broadcast;
 
     /*
         Set spawn and target positions:
@@ -95,13 +92,7 @@ if (isServer) then {
     _null = [] execVM "rqf\init\init_ai.sqf";
 
     // Flag to start mission.
-    startMission = true;
-
-    testVariable = 100;
-
-    // Send variable.
-    publicVariable "startMission";
-    publicVariable "testVariable";
+    _null = [["startMission", true]] call rqf_fnc_broadcast;
 };
 
 if (not isDedicated) then {
@@ -150,8 +141,6 @@ if (not isDedicated) then {
 // Создание задания.
    // http://arma3.ru/forums/topic/2402-sozdat-zadanie/
 
-// Параметры.
-
 // Постановка задачи.
 
 // Локализация.
@@ -177,3 +166,6 @@ if (not isDedicated) then {
 // Спрятать позицию игрока на карте.
 
 // Изменить дистанцию камеры во время старта в зависимости от дистанции
+
+// Проверить работу ботов в МП.
+    // Сделать проверку на расстановку вейпоинтов, если игрок не командир.

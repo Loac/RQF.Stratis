@@ -10,10 +10,7 @@ private [
     "_code"
 ];
 
-_index = 0;
-
-// for "_index" from 0 to count configName (missionConfigFile >> "Params") {};
-{
+for "_index" from 0 to (count paramsArray) - 1 do {
     _name = configName ((missionConfigFile >> "Params") select _index);
 
     if (not isNil "paramsArray") then {
@@ -26,6 +23,4 @@ _index = 0;
     _code = getText (missionConfigFile >> "Params" >> _name >> "code");
 
     call compile format[_code, _value];
-
-    _index = _index +1;
-} forEach paramsArray;
+};

@@ -35,7 +35,7 @@ private [
         missionNamespace setVariable [_name, _value];
     };
 
-    publicVariable _name;
+    publicVariable _name
 } forEach _this;
 
 true;
