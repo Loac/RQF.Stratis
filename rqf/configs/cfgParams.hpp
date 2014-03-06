@@ -60,11 +60,19 @@ class Params
         code = "randomDayTime = %1";
     };
 
-    class missionAI {
-        title = "Enable AI";
+    class blueAI {
+        title = "Enable blue side AI";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
         default = false;
-        code = "missionAI = %1";
+        code = "blueAI = %1";
+    };
+
+    class redAI {
+        title = "Enable red side AI";
+        values[] = { true, false };
+        texts[] = { "Yes", "No" };
+        default = false;
+        code = "redAI = %1";
     };
 };

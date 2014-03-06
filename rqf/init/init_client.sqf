@@ -70,4 +70,9 @@ cutText ["", "BLACK IN", 2];
 enableRadio true;
 
 // Wait misson complete.
-_null = [] execVM "rqf\init\init_clientOutro.sqf";
+if (isMultiplayer) then {
+    _null = [] execVM "rqf\init\init_clientOutro.sqf";
+}
+else {
+    _null = [] execVM "rqf\init\init_clientOutroSingle.sqf";
+}
