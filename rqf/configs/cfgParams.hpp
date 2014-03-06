@@ -36,23 +36,23 @@ class Params
         code = "blueTimer = %1; redTimer = %1;";
     };
 
-    class randomWeather {
-        title = "Random weather";
+    class missionWeather {
+        title = "Weather";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
         default = false;
-        code = "randomWeather = %1";
+        code = "missionWeather = %1";
     };
 
-    class randomDayTime {
-        title = "Random time of day";
+    class missionDayTime {
+        title = "Time of day";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
         default = false;
-        code = "randomDayTime = %1";
+        code = "missionDayTime = %1";
     };
 
-    class paramFog {
+    class missionFog {
         title = "Fog";
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
         texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
@@ -60,11 +60,11 @@ class Params
         code = "randomDayTime = %1";
     };
 
-    class enableCreeps {
+    class missionAI {
         title = "Enable AI";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
         default = false;
-        code = "enableCreeps = %1";
+        code = "missionAI = %1";
     };
 };

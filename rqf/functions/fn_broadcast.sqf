@@ -15,13 +15,28 @@
         redPosition
 */
 
+// {
+//      publicVariable _this;
+// } forEach _this;
+//
+// // or.
+//
+// publicVariable "blueTimer";
+// publicVariable "redTimer";
+// publicVariable "bluePosition";
+// publicVariable "redPosition";
+
+
+// [["missionComplete", true], ["blueTimer", 0]] call rqf_fnc_broadcast;
+
+_variables =  _this select 0
+
 {
-    publicVariable _this;
-} forEach _this;
+    _name = _x select 0;
+    _value = _x select 1;
 
-// or.
+    // Возможно получится сделать переменную глобальной через третий параметр.
+    missionNamespace setVariable [_name, _value];
+    publicVariable _name;
 
-publicVariable "blueTimer";
-publicVariable "redTimer";
-publicVariable "bluePosition";
-publicVariable "redPosition";
+} forEach _variables;
