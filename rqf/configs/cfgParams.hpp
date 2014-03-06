@@ -14,7 +14,7 @@ class Params
         title = "Target distance";
         values[] = { 100, 200, 300, 500, 600 };
         texts[] = { "100", "200", "300", "400", "500", "600" };
-        default = 100;
+        default = 200;
         code = "targetDistance = %1";
     };
 

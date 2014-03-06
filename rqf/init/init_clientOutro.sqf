@@ -9,11 +9,10 @@
         completeMission
 */
 
+"completeMission" addPublicVariableEventHandler {
+    _completeMission = _this select 1;
 
-waitUntil {
-    sleep 1;
-
-    switch (completeMission) do {
+    switch (_completeMission) do {
 
         case "blueHoldTarget" : {
             switch (side group player) do {
@@ -42,7 +41,6 @@ waitUntil {
                 case east: { ["win_redDominate", true, true] call BIS_fnc_endMission };
             };
         };
-    };
 
-    not (completeMission == "");
+    };
 };
