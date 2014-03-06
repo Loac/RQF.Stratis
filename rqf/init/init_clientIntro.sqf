@@ -29,3 +29,6 @@ _colorEast = EAST call BIS_fnc_sideColor;
         ["\a3\ui_f\data\map\markers\nato\o_inf.paa", _colorEast, markerPos "REDSTART", 1, 1, 0, "Red side", 0]
     ]
 ] spawn BIS_fnc_establishingShot;
+
+// FIX: Не всегда видно обе точки.
+// TODO: Поставить маркер на цель.

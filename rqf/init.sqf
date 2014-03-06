@@ -114,9 +114,6 @@ if (not isDedicated) then {
     }
 };
 
-// ["bluePosition %1", bluePosition] call BIS_fnc_error;
-// ["TaskSucceeded",["","Island captured!"]] call bis_fnc_showNotification;
-
 // Переместить камеру к таргету.
 
 // Посмотреть другие миссии.
@@ -132,8 +129,6 @@ if (not isDedicated) then {
 // Триггеры на смерть бойцов с одной стороны.
     // https://www.dropbox.com/s/knt79565bel9hsf/losses.zip Zealot Scripts
     // Попробовать сделть подсчет живых при помощи player addEventHandler ["Killed"], а не бесконечного пересчета. игроков.
-
-// init_params заменить цикл на for.
 
 // Проверить как отработает удаленно setDammage
     // https://community.bistudio.com/wiki/setDammage
