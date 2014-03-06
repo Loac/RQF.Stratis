@@ -30,14 +30,14 @@ waitUntil {
     // Strings.
     _hint = "";
     _strings = [
-        ["Blue timer (hold): %1 (%2)", [blueTimer, blueHold]],
-        ["Red timer (hold): %1 (%2)", [redTimer, redHold]],
-        ["Ratio (B:R): %1:%2", [blueUnits, redUnits]],
+        ["Blue timer (hold): %1 (%2)", blueTimer, blueHold],
+        ["Red timer (hold): %1 (%2)", redTimer, redHold],
+        ["Ratio (B:R): %1:%2", blueUnits, redUnits]
     ];
 
     // Make debug info.
     {
-        _hint = _hint + format[_x select 0, _x select 1] + "\n";
+        _hint = _hint + (format _x) + "\n";
     } forEach _strings;
 
     // Show hint.
@@ -48,4 +48,8 @@ waitUntil {
 
     // Show info while devShowInfo == true.
     not devShowInfo;
-}
+};
+
+if (not devShowInfo) then {
+    hintSilent "";
+};

@@ -27,9 +27,17 @@
 // publicVariable "redPosition";
 
 
-// [["missionComplete", true], ["blueTimer", 0]] call rqf_fnc_broadcast;
+// _null = [["missionComplete", true], ["blueTimer", 0]] call rqf_fnc_broadcast;
 
-_variables =  _this select 0
+private [
+    "_variables",
+    "_name",
+    "_value"
+];
+
+_variables = _this select 0;
+
+hint format ["%1", _variables];
 
 {
     _name = _x select 0;
@@ -40,3 +48,5 @@ _variables =  _this select 0
     publicVariable _name;
 
 } forEach _variables;
+
+true;
