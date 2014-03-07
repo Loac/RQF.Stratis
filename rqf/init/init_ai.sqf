@@ -5,7 +5,7 @@
     Description:
         Add waypoints for AI.
 
-    External:
+    External variables:
         targetPosition
         targetSize
 
