@@ -17,21 +17,25 @@
 private [
     "_position",
     "_radius",
-    "_isOnlyAI"
+    "_isAI"
 ];
 
 {
-    // Add waypoints for groups without players.
-    _isOnlyAI = true;
+    // Add waypoints for groups where player not leader.
+    _isAI = true;
 
+    // Check all units in group.
     {
-        if (isPlayer _x) then {
-            _isOnlyAI = false;
+        if (isPlayer _x && isFormationLeader _x) then {
+            _isAI = false;
         };
+
+        // No reason check next unit.
+        if (_isAI) exitWith {};
     } forEach units _x;
 
     // Set random waypoints into target marker.
-    if (_isOnlyAI) then {
+    if (_isAI) then {
         _waypoint = _x addWaypoint[targetPosition, targetSize];
         _waypoint setWaypointSpeed "FULL";
         _waypoint setWaypointBehaviour "COMBAT";

@@ -10,6 +10,8 @@
 
     See:
         player addEventHandler ["Killed"]
+        countSide
+        playableUnits
 */
 
 blueUnits = 0;
