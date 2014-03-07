@@ -36,6 +36,15 @@ class Params
         code = "blueTimer = %1; redTimer = %1;";
     };
 
+    class freezeTime
+    {
+        title = "Freeze time";
+        values[] = { 10, 30, 60, 90, 120, 180 };
+        texts[] = { "00:10", "00:30", "01:00", "01:30", "02:00", "03:00" };
+        default = 10;
+        code = "freezeTime";
+    };
+
     class missionWeather
     {
         title = "Weather";
@@ -59,7 +68,7 @@ class Params
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
         texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
         default = 0;
-        code = "randomDayTime = %1";
+        code = "missionFog = %1";
     };
 
     class missionWind {
@@ -67,7 +76,7 @@ class Params
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
         texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
         default = 0;
-        code = "randomDayTime = %1";
+        code = "missionWind = %1";
     };
 
     class missionRain {
@@ -75,7 +84,7 @@ class Params
         values[] = { -1, 0, 1 };
         texts[] = { "Random", "No", "Yes" };
         default = 0;
-        code = "randomDayTime = %1";
+        code = "missionRain = %1";
     };
 
       class missionWeather
@@ -84,6 +93,7 @@ class Params
         values[] = { 2, 0, 3, 0.5, 0.75, 1 };
         texts[] = { "Random", "Clear", "Partly Cloudy", "Cloudy", "Overcast", "Storm" };
         default = 2;
+        code = "missionRain = %1";
       };
 
     class blueAI {

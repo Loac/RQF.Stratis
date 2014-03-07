@@ -10,6 +10,8 @@ private [
     "_code"
 ];
 
+// TODO: Добавить проверку поля "code", если его нету, то просто присвоить значение названию параметра.
+
 for "_index" from 0 to (count paramsArray) - 1 do {
     _name = configName ((missionConfigFile >> "Params") select _index);
 
