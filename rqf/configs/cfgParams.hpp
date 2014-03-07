@@ -36,7 +36,8 @@ class Params
         code = "blueTimer = %1; redTimer = %1;";
     };
 
-    class missionWeather {
+    class missionWeather
+    {
         title = "Weather";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
@@ -44,10 +45,11 @@ class Params
         code = "missionWeather = %1";
     };
 
-    class missionDayTime {
+    class missionDayTime
+    {
         title = "Time of day";
-        values[] = { true, false };
-        texts[] = { "Yes", "No" };
+        values[] = { 1, -8, -6, 0, 8, 13, 2 };
+        texts[] = { "Random", "Early Morning", "Morning", "Noon", "Sundown", "Night with Full Moon", "Dark Night" };
         default = false;
         code = "missionDayTime = %1";
     };
@@ -59,6 +61,30 @@ class Params
         default = 0;
         code = "randomDayTime = %1";
     };
+
+    class missionWind {
+        title = "Wind";
+        values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
+        texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
+        default = 0;
+        code = "randomDayTime = %1";
+    };
+
+    class missionRain {
+        title = "Rain";
+        values[] = { -1, 0, 1 };
+        texts[] = { "Random", "No", "Yes" };
+        default = 0;
+        code = "randomDayTime = %1";
+    };
+
+      class missionWeather
+      {
+        title = "Weather:";
+        values[] = { 2, 0, 3, 0.5, 0.75, 1 };
+        texts[] = { "Random", "Clear", "Partly Cloudy", "Cloudy", "Overcast", "Storm" };
+        default = 2;
+      };
 
     class blueAI {
         title = "Enable blue side AI";
