@@ -42,16 +42,7 @@ class Params
         values[] = { 10, 30, 60, 90, 120, 180 };
         texts[] = { "00:10", "00:30", "01:00", "01:30", "02:00", "03:00" };
         default = 10;
-        code = "freezeTime";
-    };
-
-    class missionWeather
-    {
-        title = "Weather";
-        values[] = { true, false };
-        texts[] = { "Yes", "No" };
-        default = false;
-        code = "missionWeather = %1";
+        code = "freezeTime = %1";
     };
 
     class missionDayTime
@@ -63,7 +54,8 @@ class Params
         code = "missionDayTime = %1";
     };
 
-    class missionFog {
+    class missionFog
+    {
         title = "Fog";
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
         texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
@@ -71,7 +63,8 @@ class Params
         code = "missionFog = %1";
     };
 
-    class missionWind {
+    class missionWind
+    {
         title = "Wind";
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
         texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
@@ -79,7 +72,8 @@ class Params
         code = "missionWind = %1";
     };
 
-    class missionRain {
+    class missionRain
+    {
         title = "Rain";
         values[] = { -1, 0, 1 };
         texts[] = { "Random", "No", "Yes" };
@@ -87,16 +81,17 @@ class Params
         code = "missionRain = %1";
     };
 
-      class missionWeather
-      {
+    class missionWeather
+    {
         title = "Weather:";
         values[] = { 2, 0, 3, 0.5, 0.75, 1 };
         texts[] = { "Random", "Clear", "Partly Cloudy", "Cloudy", "Overcast", "Storm" };
         default = 2;
         code = "missionRain = %1";
-      };
+    };
 
-    class blueAI {
+    class blueAI
+    {
         title = "Enable blue side AI";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
@@ -104,7 +99,8 @@ class Params
         code = "blueAI = %1";
     };
 
-    class redAI {
+    class redAI
+    {
         title = "Enable red side AI";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
