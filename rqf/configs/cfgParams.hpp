@@ -27,8 +27,8 @@ class Params
     class sideTimer
     {
         title = "Hold time positions";
-        values[] = { 10, 30, 60, 90, 120 };
-        texts[] = { "00:10", "00:30", "01:00", "01:30", "02:00" };
+        values[] = { 30, 60, 90, 120 };
+        texts[] = { "00:30", "01:00", "01:30", "02:00" };
         default = 10;
     };
 

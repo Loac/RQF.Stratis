@@ -37,9 +37,9 @@ private [
     // Set random waypoints into target marker.
     if (_isAI) then {
         _waypoint = _x addWaypoint[targetPosition, targetSize];
-        _waypoint setWaypointSpeed "FULL";
-        // _waypoint setWaypointBehaviour "COMBAT";
         _waypoint setWaypointType "HOLD";
+        // _waypoint setWaypointSpeed "FULL";
+        // _waypoint setWaypointBehaviour "COMBAT";
     };
 
 } forEach allGroups;

@@ -15,6 +15,7 @@
 
     External variables:
         startMission
+        environment
 */
 
 private [

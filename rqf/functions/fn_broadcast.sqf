@@ -8,12 +8,6 @@
     See:
         publicVariable
 
-    External variables:
-        blueTimer
-        redTimer
-        bluePosition
-        redPosition
-
     Example:
         _null = [["missionComplete", true], ["blueTimer", 0]] call rqf_fnc_broadcast;
 */

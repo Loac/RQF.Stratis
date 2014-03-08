@@ -6,7 +6,6 @@
         Delete all palyable markers.
 
     Example:
-        _zoneMarkers = [] execVM "rqf\functions\fn_deletePlayableMarkers.sqf";
         [] call rqf_fnc_deleteZoneMarkers;
 */
 

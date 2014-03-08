@@ -11,6 +11,7 @@
         BIS_fnc_MP
 
     Example:
+        [west, "blueHoldTarget"] call rqf_fnc_endMission;
     	[[west, "blueHoldTarget"], "rqf_fnc_endMission"] spawn BIS_fnc_MP;
 */
 

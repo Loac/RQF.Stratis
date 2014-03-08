@@ -5,11 +5,6 @@
     Description:
         Set environment: fog, day time and etc.
 
-    External variables:
-        targetPosition
-        bluePosition
-        redPosition
-
     Example:
         dayTime, weather, fog
         [["fog", 1], ["overcast", 1]] call rqf_fnc_setEnvironment;
