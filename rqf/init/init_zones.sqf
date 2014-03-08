@@ -25,7 +25,7 @@ private [
     "_tryForPosition",
     "_blueReady",
     "_redReady",
-    "_playableMarkers"
+    "_zoneMarkers"
 ];
 
 // Count attempts for find positions.
@@ -36,25 +36,25 @@ _blueReady = false;
 _redReady = false;
 
 // Find all zone markers.
-_playableMarkers = [] call rqf_fnc_getZoneMarkers;
+_zoneMarkers = [] call rqf_fnc_getZoneMarkers;
 
 // TODO: Добавить ограничение на количество попыток смены маркеров.
 // TODO: Добавить проверку на присутсвие игровых ("ColorOrange") маркеров.
 
-// Выбрать цель и расположение стартовые расположения сторон.
+// Get target and start side positions.
 while {not _blueReady || not _redReady} do {
-    // Выбрать случайный маркер.
-    _playableMarker = _playableMarkers call BIS_fnc_selectRandom;
+    // Get random zone marker.
+    _zoneMarker = _zoneMarkers call BIS_fnc_selectRandom;
 
     // Выбрать случайную позицию в пределах этого маркера для указания цели миссии.
-    targetPosition = [[[getMarkerPos _playableMarker, getMarkerSize _playableMarker select 0]], ["water", "out"]] call BIS_fnc_randomPos;
+    targetPosition = [[[getMarkerPos _zoneMarker, getMarkerSize _zoneMarker select 0]], ["water", "out"]] call BIS_fnc_randomPos;
 
-    // Сбросить переменные.
+    // Reset variables.
     _try = 0;
     _blueReady = false;
     _redReady = false;
 
-    // Поиск позции синих.
+    // Find position for blue side.
     while {not _blueReady && _try < _tryForPosition} do {
         _blueDegrees = random 360;
         bluePosition = [

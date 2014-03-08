@@ -43,7 +43,7 @@ class Params
     class envSeason
     {
         title = "Season";
-        values[] = { -1, 1, 4, 7, 10 };
+        values[] = { -1, 0, 1, 2, 3 };
         texts[] = { "Random", "Winter", "Spring", "Summer", "Autumn" };
         default = -1;
     };
