@@ -22,6 +22,11 @@ else {
     0 setFog missionFog;
 };
 
+// setFog - туман - нужно выполнять для каждого клиента.
+// setOvercast - облачность
+// setDate - время года
+// skeepTime
+
 /*
     Time of day.
     http://www.armaholic.com/page.php?id=7116

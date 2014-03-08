@@ -51,8 +51,6 @@ _markerName = _this select 0;
 _markerPos = _this select 1;
 _params = _this select 2;
 
-_paramsDefault = ["shape", "size"];
-
 _marker = createMarker [_markerName, _markerPos];
 
 // Optional parametrs.

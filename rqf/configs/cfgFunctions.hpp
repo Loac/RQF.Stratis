@@ -11,6 +11,7 @@ class CfgFunctions
             class updateRatio { description = "Update ratio forces."; };
             class broadcast { description = "Broadcast variables for all clients."; };
             class endMission { description = "Initialisation end mission."; };
+            //class setEnvironment { description = "Set environment."; } ;
         };
     };
 };

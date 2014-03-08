@@ -30,21 +30,6 @@
 */
 
 if (isServer) then {
-    // Position of target.
-    targetPosition = [];
-
-    // Coordinates of side start.
-    bluePosition = [];
-    redPosition = [];
-
-    // Flags of side hold positions.
-    blueHold = false;
-    redHold = false;
-
-    // Count units by side.
-    blueUnits = 0;
-    redUnits = 0;
-
     /*
         Set parameters.
     */
@@ -148,3 +133,11 @@ if (not isDedicated) then {
 
 // Проверить работу ботов в МП.
     // Сделать проверку на расстановку вейпоинтов, если игрок не командир.
+
+// Создание техники
+    // BIS_fnc_spawnVehicle
+
+//    bis_fnc_spawnvehicle
+    //vhl = createVehicle ["C_SUV_01_F", getPos player, [], 0,""];
+
+// Проверить работу setPlayable
