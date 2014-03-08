@@ -46,7 +46,7 @@ while {not _blueReady || not _redReady} do {
     // Get random zone marker.
     _zoneMarker = _zoneMarkers call BIS_fnc_selectRandom;
 
-    // Выбрать случайную позицию в пределах этого маркера для указания цели миссии.
+    // Get target position from zone marker area.
     targetPosition = [[[getMarkerPos _zoneMarker, getMarkerSize _zoneMarker select 0]], ["water", "out"]] call BIS_fnc_randomPos;
 
     // Reset variables.
@@ -62,16 +62,16 @@ while {not _blueReady || not _redReady} do {
             (targetPosition select 1) + (cos _blueDegrees * targetDistance)
         ];
 
-        // Если в текущей позиции можно спавнится.
+        // If it safe position for spawn.
         bluePosition = bluePosition findEmptyPosition [0, 10];
 
-        // Установить влаг готовности синих.
+        // Mark blue flag is ready.
         _blueReady = if (count bluePosition > 0) then [{ true }, { false }];
 
         _try = _try + 1;
     };
 
-    // Поиск позции красных.
+    // Find position for red side.
     while {not _redReady && _try < _tryForPosition} do {
         _redDegrees = _blueDegrees + 180 + ([sideDeviation * -1, sideDeviation] call BIS_fnc_randomInt);
         redPosition = [
@@ -79,14 +79,12 @@ while {not _blueReady || not _redReady} do {
             (targetPosition select 1) + (cos _redDegrees * targetDistance)
         ];
 
-        // Если в текущей позиции можно спавнится.
+        // If it safe position for spawn.
         redPosition = redPosition findEmptyPosition [0, 10];
 
-        // Установить влаг готовности красных.
+        // Mark blue flag is ready.
         _redReady = if (count redPosition > 0) then [{ true }, { false }];
 
         _try = _try + 1;
     };
-
-    // Если не получается найти позиции для сторон, найти новую цель.
 };

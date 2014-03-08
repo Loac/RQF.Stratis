@@ -30,7 +30,7 @@
 
     Example:
         _marker = ["MARKER", position player, [["type", "mil_dot"], ["text", "I'am here."]]] execVM "rqf\functions\fn_createMarker.sqf";
-        _marker = ["MARKER", position player, [["shape", "ELLIPSE"], ["size", [50, 50]]]] execVM "rqf\functions\fn_createMarker.sqf";
+        _marker = ["MARKER", position player, [["shape", "ELLIPSE"], ["size", [50, 50]]]] call rqf_fnc_createMarker;
 
     See:
         https://community.bistudio.com/wiki/createMarker
@@ -68,6 +68,7 @@ _marker = createMarker [_markerName, _markerPos];
         case "text": { _marker setMarkerText _value };
         case "alpha": { _marker setMarkerAlpha _value };
     };
+
 } foreach _params;
 
 // Return.

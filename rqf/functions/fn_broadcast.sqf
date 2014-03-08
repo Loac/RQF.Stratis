@@ -6,6 +6,7 @@
         Send public variables to all clients.
 
     See:
+        setVariable
         publicVariable
 
     Example:
@@ -17,8 +18,6 @@ private [
     "_value"
 ];
 
-// Добавить возможность трансляции без изменения значений переменных.
-
 {
     _name = _x select 0;
 
@@ -29,7 +28,9 @@ private [
         missionNamespace setVariable [_name, _value];
     };
 
-    publicVariable _name
+    // Broadcast variable.
+    publicVariable _name;
+
 } forEach _this;
 
 true;

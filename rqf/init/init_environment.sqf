@@ -40,7 +40,7 @@ _envParams = [
 // Month by seasons.
 _seasons = [[12, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]];
 
-// Default date.
+// Default random date.
 _year = 2014;
 _month = [1, 12] call BIS_fnc_randomInt;
 _day = [1, 27] call BIS_fnc_randomInt;
@@ -48,14 +48,14 @@ _hour = [1, 23] call BIS_fnc_randomInt;
 _minute = [1, 59] call BIS_fnc_randomInt;
 
 {
-    // Name of environment.
+    // Name environment.
     _envName = _x;
 
     // Value environment.
     _envValue = missionNamespace getVariable _envName;
 
     // If value less 0, then it random environment.
-    // Env params "envSeason" and "envTime" will be in environment array, but "fn_setEnvironment" just ignore it.
+    // Env params "envSeason" and "envTime" will be in environment array, but "rqf_fnc_setEnvironment" just ignore it.
     if (_envValue < 0) then {
         // Get available values.
         _availableValues = getArray (missionConfigFile >> "Params" >> _envName >> "values");
@@ -68,6 +68,7 @@ _minute = [1, 59] call BIS_fnc_randomInt;
         switch _envName do {
             // Get random month in selected season.
             case "envSeason": { _month = (_seasons select _envValue) select ([0, 2] call BIS_fnc_randomInt) };
+            // Add a little random.
             case "envTime": { _hour = _envValue + ([0, 3] call BIS_fnc_randomInt) };
         };
     };

@@ -37,7 +37,7 @@ if (isServer) then {
     */
     _handle = [] execVM "rqf\init\init_params.sqf"; waitUntil { scriptDone _handle };
 
-    // Set and broadcast flag start mission and targetDistance value.
+    // Set and broadcast flag startMission and targetDistance value.
     _null = [
         ["startMission", false],
         ["environment", []],
@@ -63,7 +63,7 @@ if (isServer) then {
     _handle = [] execVM "rqf\init\init_triggers.sqf";
 
     /*
-        Teleport all unit to start positions.
+        Teleport all units to start positions.
     */
     _handle = [] execVM "rqf\init\init_positions.sqf";
 
@@ -106,9 +106,6 @@ if (not isDedicated) then {
 };
 
 // Переместить камеру к таргету.
-
-// Проверить синхронизацию JIP.
-    // Постановку маркеров для JIP пользователей.
 
 // Постановка задачи.
 // Создание задания.
