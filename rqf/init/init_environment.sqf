@@ -22,7 +22,8 @@ private [
     "_day",
     "_hour",
     "_minute",
-    "_fog"
+    "_fog",
+    "_overcast"
 ];
 
 /*
@@ -39,7 +40,7 @@ if (missionDayTime < 0 ) then {
     _availableValues = getArray (missionConfigFile >> "Params" >> "missionDayTime" >> "values");
 
     // Select random value from array, exclude first position with random flag (-1).
-    _hour = _availableValues select ([1, (count _availableValues - 2)] call BIS_fnc_randomInt);
+    _hour = _availableValues select ([1, (count _availableValues - 1)] call BIS_fnc_randomInt);
 }
 else {
     // Set hour from selected value.
@@ -55,7 +56,7 @@ environment = environment + [["date", [_year, _month, _day, _hour, _minute]]];
 if (missionFog < 0) then {
     _availableValues = getArray (missionConfigFile >> "Params" >> "missionFog" >> "values");
 
-    _fog = _availableValues select ([1, (count _availableValues - 2)] call BIS_fnc_randomInt);
+    _fog = _availableValues select ([1, (count _availableValues - 1)] call BIS_fnc_randomInt);
 }
 else {
     _fog = missionFog;
@@ -63,6 +64,21 @@ else {
 
 // Add value to environment array.
 environment = environment + [["fog", _fog]];
+
+/*
+    Set overcast.
+*/
+if (missionOvercast < 0) then {
+    _availableValues = getArray (missionConfigFile >> "Params" >> "missionOvercast" >> "values");
+
+    _overcast = _availableValues select ([1, (count _availableValues - 1)] call BIS_fnc_randomInt);
+}
+else {
+    _overcast = missionOvercast;
+};
+
+// Add value to environment array.
+environment = environment + [["overcast", _overcast]];
 
 /*
     Accept variable.

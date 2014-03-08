@@ -34,7 +34,7 @@ class Params
 
     class freezeTime
     {
-        title = "Freeze time";
+        title = "Freeze time (not work yet)";
         values[] = { 10, 30, 60, 90, 120, 180 };
         texts[] = { "00:10", "00:30", "01:00", "01:30", "02:00", "03:00" };
         default = 10;
@@ -48,12 +48,12 @@ class Params
         default = -1;
     };
 
-    class missionWeather
+    class missionOvercast
     {
-        title = "Weather";
-        values[] = { -1, 0, 1, 2, 3, 4 };
+        title = "Overcast";
+        values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
         texts[] = { "Random", "Clear", "Partly Cloudy", "Cloudy", "Overcast", "Storm" };
-        default = 2;
+        default = -1;
     };
 
     class missionFog
@@ -61,12 +61,12 @@ class Params
         title = "Fog";
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
         texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
-        default = 0;
+        default = -1;
     };
 
     class blueAI
     {
-        title = "Enable blue side AI";
+        title = "Enable blue side AI (not work yet)";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
         default = false;
@@ -74,7 +74,7 @@ class Params
 
     class redAI
     {
-        title = "Enable red side AI";
+        title = "Enable red side AI (not work yet)";
         values[] = { true, false };
         texts[] = { "Yes", "No" };
         default = false;
