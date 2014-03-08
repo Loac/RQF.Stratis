@@ -1,11 +1,9 @@
 enableDebugConsole = 2;
 allowFunctionsLog = 1;
 
-onLoadName = "RQF";
+onLoadName = "RQF Stratis";
 onLoadMission = "Good luck";
 author = "Loac";
-
-showGPS = 0;
 
 #include "rqf\configs\cfgHeader.hpp"
 #include "rqf\configs\cfgParams.hpp"

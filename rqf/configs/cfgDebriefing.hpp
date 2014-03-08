@@ -1,6 +1,6 @@
 class CfgDebriefing
 {
-    class west_blueHoldTarget
+    class WEST_blueHoldTarget
     {
         title = $STR_RQF_win;
         subtitle = $STR_RQF_blueHoldTarget;
@@ -10,7 +10,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class east_blueHoldTarget
+    class EAST_blueHoldTarget
     {
         title = $STR_RQF_lose;
         subtitle = $STR_RQF_blueHoldTarget;
@@ -20,7 +20,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class west_redHoldTarget
+    class WEST_redHoldTarget
     {
         title = $STR_RQF_lose;
         subtitle = $STR_RQF_redHoldTarget;
@@ -30,7 +30,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class east_redHoldTarget
+    class EAST_redHoldTarget
     {
         title = $STR_RQF_win;
         subtitle = $STR_RQF_redHoldTarget;
@@ -40,7 +40,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class west_blueDominate
+    class WEST_blueDominate
     {
         title = $STR_RQF_win;
         subtitle = $STR_RQF_blueDominate;
@@ -50,7 +50,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class east_blueDominate
+    class EAST_blueDominate
     {
         title = $STR_RQF_lose;
         subtitle = $STR_RQF_blueDominate;
@@ -60,7 +60,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class west_redDominate
+    class WEST_redDominate
     {
         title = $STR_RQF_lose;
         subtitle = $STR_RQF_redDominate;
@@ -70,7 +70,7 @@ class CfgDebriefing
         pictureColor[] = { 0, 0, 1, 1 };
     };
 
-    class east_redDominate
+    class EAST_redDominate
     {
         title = $STR_RQF_win;
         subtitle = $STR_RQF_redDominate;

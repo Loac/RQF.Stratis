@@ -24,6 +24,8 @@
         redRatio
         startMission
             Flag to start mission.
+        environment
+            Array with environment settings.
 
     See:
         https://community.bistudio.com/wiki/6thSense.eu:EG
@@ -51,7 +53,7 @@ if (isServer) then {
     _handle = [] execVM "rqf\init\init_zones.sqf"; waitUntil { scriptDone _handle };
 
     /*
-        Initialize environment: fog, day time and etc.
+        Initialize environment: fog, time and etc.
     */
     _handle = [] execVM "rqf\init\init_environment.sqf";
 
@@ -89,9 +91,7 @@ if (not isDedicated) then {
         Magic.
     */
     waitUntil { not isNull Player and isPlayer Player };
-    //waitUntil { count environment > 0; };
 
-//    [["date", [2014, 7, 1, 15, 0]]] call rqf_fnc_setEnvironment;
     /*
         Client side procedures.
     */
@@ -109,11 +109,7 @@ if (not isDedicated) then {
 
 // Переместить камеру к таргету.
 
-// Посмотреть другие миссии.
-    // https://www.dropbox.com/s/eh0as3bo0oqmvql/wog_140_Defence_Atira_9f.Altis.zip
-
 // Проверить синхронизацию JIP.
-    // Например этим https://community.bistudio.com/wiki/setFog
     // Постановку маркеров для JIP пользователей.
 
 // Создание задания.
@@ -123,10 +119,6 @@ if (not isDedicated) then {
 // Постановка задачи.
 
 // Локализация.
-
-// Случайная погода.
-
-// Случайное время суток.
 
 // Свой фризтайм.
 

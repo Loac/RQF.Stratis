@@ -1,4 +1,4 @@
-/*
+ /*
     Author:
         Dmitry Loac.
 
@@ -28,7 +28,7 @@ _winner = _this select 0;
 _scenario = _this select 1;
 
 // Final (see cfgDebriefing.hpp).
-_debriefing = str(_winner) + "_" + _scenario;
+_debriefing = str(playerSide) + "_" + _scenario;
 
 // Victory flag.
 _isVictory = (playerSide == _winner);
