@@ -40,7 +40,7 @@ class Params
         default = 10;
     };
 
-    class missionDayTime
+    class envTime
     {
         title = "Time of day";
         values[] = { -1, 0, 4, 8, 12, 16, 20 };
@@ -48,7 +48,7 @@ class Params
         default = -1;
     };
 
-    class missionOvercast
+    class envOvercast
     {
         title = "Overcast";
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
@@ -56,7 +56,7 @@ class Params
         default = -1;
     };
 
-    class missionFog
+    class envFog
     {
         title = "Fog";
         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
@@ -64,7 +64,7 @@ class Params
         default = -1;
     };
 
-    class missionRain
+    class envRain
     {
         title = "Rain";
         values[] = { -1, 0, 1 };
