@@ -32,7 +32,13 @@ if (missionDayTime < 0 ) then {
     // Select random value from array, exclude first position with random flag (-1).
     _hour = _availableValues select ([1, (count _availableValues - 2)] call BIS_fnc_randomInt);
 
-    setDate [_year, _month, _day, _hour, _minute];
+    environment = environment + ["date", [_year, _month, _day, _hour, _minute]];
+
+    // Broadcast variable for all clients.
+    [["environment"]] call rqf_fnc_broadcast;
+
+    // Set environment on server.
+    [environment] call rqf_fnc_setEnvironment;
 }
 
 /*
@@ -55,3 +61,5 @@ if (missionDayTime < 0 ) then {
     Time of day.
     http://www.armaholic.com/page.php?id=7116
 */
+
+// [environment] call rqf_fnc_setEnvironment;  td = date; publicVariable "td";publicVariable "test";

@@ -36,7 +36,11 @@ if (isServer) then {
     _handle = [] execVM "rqf\init\init_params.sqf"; waitUntil { scriptDone _handle };
 
     // Set and broadcast flag start mission and targetDistance value.
-    _null = [["startMission", false], ["targetDistance"]] call rqf_fnc_broadcast;
+    _null = [
+        ["startMission", false],
+        ["environment", []],
+        ["targetDistance"]
+    ] call rqf_fnc_broadcast;
 
     /*
         Set spawn and target positions:
@@ -85,7 +89,9 @@ if (not isDedicated) then {
         Magic.
     */
     waitUntil { not isNull Player and isPlayer Player };
+    //waitUntil { count environment > 0; };
 
+//    [["date", [2014, 7, 1, 15, 0]]] call rqf_fnc_setEnvironment;
     /*
         Client side procedures.
     */
@@ -98,6 +104,8 @@ if (not isDedicated) then {
         _handle = [] execVM "rqf\init\init_devel.sqf";
     }
 };
+
+// Расстановка вейпоинтов!
 
 // Переместить камеру к таргету.
 

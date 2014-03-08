@@ -32,6 +32,10 @@ _zoneMarkers = [] call rqf_fnc_getZoneMarkers;
     deleteMarker _x;
 } forEach _zoneMarkers;
 
+// Wait variable environment and set it.
+waitUntil { count environment > 0 };
+[environment] call rqf_fnc_setEnvironment;
+
 // Focus on target marker.
 // disableserialization;
 // _mapDisplay = findDisplay 12;
