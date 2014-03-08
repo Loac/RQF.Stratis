@@ -26,11 +26,7 @@ private [
 enableSaving [false, false];
 
 // Delete zone markers.
-_zoneMarkers = [] call rqf_fnc_getZoneMarkers;
-
-{
-    deleteMarker _x;
-} forEach _zoneMarkers;
+[] call rqf_fnc_deleteZoneMarkers;
 
 // Wait variable environment and set it.
 waitUntil { count environment > 0 };

@@ -26,12 +26,13 @@ if (missionDayTime < 0 ) then {
     _hour = 12;
     _minute = 0;
 
-    // Get time (hour).
+    // Get available values for hour.
     _availableValues = getArray (missionConfigFile >> "Params" >> "missionDayTime" >> "values");
 
     // Select random value from array, exclude first position with random flag (-1).
     _hour = _availableValues select ([1, (count _availableValues - 2)] call BIS_fnc_randomInt);
 
+    // Add value to environment array.
     environment = environment + ["date", [_year, _month, _day, _hour, _minute]];
 
     // Broadcast variable for all clients.
