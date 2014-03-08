@@ -43,9 +43,9 @@ class Params
     class missionDayTime
     {
         title = "Time of day";
-        values[] = { 1, -8, -6, 0, 8, 13, 2 };
-        texts[] = { "Random", "Early Morning", "Morning", "Noon", "Sundown", "Night with Full Moon", "Dark Night" };
-        default = false;
+        values[] = { -1, 0, 4, 8, 12, 16, 20 };
+        texts[] = { "Random", "Dark night", "Early morning", "Morning", "Noon", "Sundown", "Night" };
+        default = -1;
     };
 
     class missionWeather

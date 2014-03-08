@@ -41,37 +41,3 @@ private [
 
 // Return.
 true;
-
-// Return.
-// _marker;
-//
-//vhl1 = "C_SUV_01_F" createVehicleLocal getPos player
-//     class missionDayTime
-//     {
-//         title = "Time of day";
-//         values[] = { 1, -8, -6, 0, 8, 13, 2 };
-//         texts[] = { "Random", "Early Morning", "Morning", "Noon", "Sundown", "Night with Full Moon", "Dark Night" };
-//         default = false;
-//         code = "missionDayTime = %1";
-//     };
-//
-//     class missionWeather
-//     {
-//         title = "Weather";
-//         values[] = { -1, 0, 1, 2, 3, 4 };
-//         texts[] = { "Random", "Clear", "Partly Cloudy", "Cloudy", "Overcast", "Storm" };
-//         default = 2;
-//         code = "missionWeather = %1";
-//     };
-//
-//     class missionFog
-//     {
-//         title = "Fog";
-//         values[] = { -1, 0, 0.25, 0.50, 0.75, 1 };
-//         texts[] = { "Random", "No", "Little", "Middle", "High", "Full" };
-//         default = 0;
-//         code = "missionFog = %1";
-//     };
-//
-// _weather
-// _time

@@ -47,6 +47,11 @@ if (isServer) then {
     _handle = [] execVM "rqf\init\init_zones.sqf"; waitUntil { scriptDone _handle };
 
     /*
+        Initialize environment: fog, day time and etc.
+    */
+    _handle = [] execVM "rqf\init\init_environment.sqf";
+
+    /*
         Set triggers.
     */
     _handle = [] execVM "rqf\init\init_triggers.sqf";
