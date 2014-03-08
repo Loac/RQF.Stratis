@@ -15,14 +15,14 @@
         [["fog", 1], ["overcast", 1]] call rqf_fnc_setEnvironment;
 */
 
-
 private [
-    "_markerName",
-    "_markerPos",
     "_params",
     "_name",
     "_value"
 ];
+
+// Get value from parametrs
+_params = _this select 0;
 
 {
     _name = _x select 0;
@@ -37,7 +37,7 @@ private [
         case "rainbow": { 0 setRainbow _value };        // 0 or 1
     };
 
-} foreach _this;
+} foreach _params;
 
 // Return.
 true;

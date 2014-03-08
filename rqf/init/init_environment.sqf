@@ -16,6 +16,15 @@
         http://killzonekid.com/arma-scripting-tutorials-arrays-part-2/
 */
 
+private [
+    "_year",
+    "_month",
+    "_day",
+    "_hour",
+    "_minute",
+    "_fog"
+];
+
 /*
     Set date and day time.
 */
@@ -31,36 +40,35 @@ if (missionDayTime < 0 ) then {
 
     // Select random value from array, exclude first position with random flag (-1).
     _hour = _availableValues select ([1, (count _availableValues - 2)] call BIS_fnc_randomInt);
-
-    // Add value to environment array.
-    environment = environment + ["date", [_year, _month, _day, _hour, _minute]];
-
-    // Broadcast variable for all clients.
-    [["environment"]] call rqf_fnc_broadcast;
-
-    // Set environment on server.
-    [environment] call rqf_fnc_setEnvironment;
 }
+else {
+    // Set hour from selected value.
+    _hour = missionDayTime;
+};
+
+// Add value to environment array.
+environment = environment + [["date", [_year, _month, _day, _hour, _minute]]];
 
 /*
-    Fog.
+    Set fog.
 */
-// if (missionFog < 0) then {
-//     // Set random value fog.
-//     0 setFog [0, 0.25, 0.50, 0.75, 1] call BIS_fnc_selectRandom;
-// }
-// else {
-//     0 setFog missionFog;
-// };
+if (missionFog < 0) then {
+    _availableValues = getArray (missionConfigFile >> "Params" >> "missionFog" >> "values");
 
-// setFog - туман - нужно выполнять для каждого клиента.
-// setOvercast - облачность
-// setDate - время года
-// skeepTime
+    _fog = _availableValues select ([1, (count _availableValues - 2)] call BIS_fnc_randomInt);
+}
+else {
+    _fog = missionFog;
+};
+
+// Add value to environment array.
+environment = environment + [["fog", _fog]];
 
 /*
-    Time of day.
-    http://www.armaholic.com/page.php?id=7116
+    Accept variable.
 */
+// Broadcast variable for all clients.
+[["environment"]] call rqf_fnc_broadcast;
 
-// [environment] call rqf_fnc_setEnvironment;  td = date; publicVariable "td";publicVariable "test";
+// Set environment on server.
+[environment] call rqf_fnc_setEnvironment;
