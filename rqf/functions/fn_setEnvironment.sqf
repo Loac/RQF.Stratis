@@ -29,7 +29,7 @@ _params = _this select 0;
     _value = _x select 1;
 
     switch (_name) do {
-        case "envTime": { setDate _value };                // [year, month, day, hour, minute]
+        case "envDate": { setDate _value };                // [year, month, day, hour, minute]
         case "envWind": { setWind _value };                // [x, z, forced]
         case "envFog": { 0 setFog _value };                // 0 to 1
         case "envOvercast": { 0 setOvercast _value };      // 0 to 1

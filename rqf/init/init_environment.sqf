@@ -5,6 +5,8 @@
     Description:
         Initialize environment: fog, day time and etc.
 
+        envDate not declare in cfgParams and get value from envSeason and envTime.
+
     External variables:
         environment
 
@@ -27,15 +29,16 @@ private [
 
 // Environment name parameters.
 _envParams = [
+    "envSeason",
     "envTime",
     "envFog",
     "envOvercast",
     "envRain"
 ];
 
-// Date.
+// Default date.
 _year = 2014;
-_month = 7; // Jule. TODO: It must to be random or selectable value.
+_month = 7;
 _day = 1;
 _hour = 12;
 _minute = 0;
@@ -57,15 +60,22 @@ _minute = 0;
         _envValue = _availableValues select ([1, (count _availableValues - 1)] call BIS_fnc_randomInt);
     };
 
-    // Excludes for some variables.
+    // Make environment excludes for some variables.
     switch _envName do {
-        case "envTime": { _envValue = [_year, _month, _day, _envValue, _minute] };
+        case "envSeason": { _month = _envValue };
+        case "envTime": { _hour = _envValue };
+
+        default {
+            // Add value to environment array.
+            environment = environment + [[_envName, _envValue]];
+        };
     };
 
-    // Add value to environment array.
-    environment = environment + [[_envName, _envValue]];
 
 } forEach _envParams;
+
+// Date and time manually set.
+environment = environment + [["envDate", [_year, _month, _day, _hour, _minute]]];
 
 // Broadcast variable for all clients.
 [["environment"]] call rqf_fnc_broadcast;

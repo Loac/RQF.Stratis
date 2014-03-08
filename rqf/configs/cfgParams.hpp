@@ -40,6 +40,14 @@ class Params
         default = 10;
     };
 
+    class envSeason
+    {
+        title = "Season";
+        values[] = { -1, 1, 4, 7, 10 };
+        texts[] = { "Random", "Winter", "Spring", "Summer", "Autumn" };
+        default = -1;
+    };
+
     class envTime
     {
         title = "Time of day";
