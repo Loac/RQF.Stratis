@@ -24,7 +24,8 @@ private [
     "_minute",
     "_envName",
     "_envValue",
-    "_availableValues"
+    "_availableValues",
+    "_seasons"
 ];
 
 // Environment name parameters.
@@ -36,12 +37,15 @@ _envParams = [
     "envRain"
 ];
 
+// Month by seasons.
+_seasons = [[12, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]];
+
 // Default date.
 _year = 2014;
 _month = 7;
-_day = 1;
+_day = [1, 27] call BIS_fnc_randomInt;
 _hour = 12;
-_minute = 0;
+_minute = [1, 59] call BIS_fnc_randomInt;
 
 {
     // Name of environment.
@@ -62,8 +66,8 @@ _minute = 0;
 
     // Make environment excludes for some variables.
     switch _envName do {
-        case "envSeason": { _month = _envValue };
-        case "envTime": { _hour = _envValue };
+        case "envSeason": { _month = _envValue + ((_seasons select 2) call BIS_fnc_selectRandom) };
+        case "envTime": { _hour = _envValue + ([0, 3] call BIS_fnc_randomInt) };
 
         default {
             // Add value to environment array.

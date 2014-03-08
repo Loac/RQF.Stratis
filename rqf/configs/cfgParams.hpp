@@ -29,7 +29,7 @@ class Params
         title = "Hold time positions";
         values[] = { 30, 60, 90, 120 };
         texts[] = { "00:30", "01:00", "01:30", "02:00" };
-        default = 10;
+        default = 30;
     };
 
     class freezeTime
@@ -52,7 +52,7 @@ class Params
     {
         title = "Time of day";
         values[] = { -1, 0, 4, 8, 12, 16, 20 };
-        texts[] = { "Random", "Dark night", "Early morning", "Morning", "Noon", "Sundown", "Night" };
+        texts[] = { "Random", "Dark night", "Early morning", "Morning", "Afternoon", "Sundown", "Night" };
         default = -1;
     };
 

@@ -18,7 +18,7 @@
 
     Spawn chemlight and attach it to player:
         chemlight = "Chemlight_yellow" createVehicle getPos player;
-        chemlight attachTo [player, [1,0,0]];
+        chemlight attachTo [player, [0,0,0]];
 
     Spawn AK47 on the ground.
         ak47 = "GroundWeaponHolder" createVehicle position player;
