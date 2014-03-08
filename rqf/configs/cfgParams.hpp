@@ -64,6 +64,14 @@ class Params
         default = -1;
     };
 
+    class missionRain
+    {
+        title = "Rain";
+        values[] = { -1, 0, 1 };
+        texts[] = { "Random", "No", "Yes" };
+        default = -1;
+    };
+
     class blueAI
     {
         title = "Enable blue side AI (not work yet)";

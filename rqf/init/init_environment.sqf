@@ -23,7 +23,8 @@ private [
     "_hour",
     "_minute",
     "_fog",
-    "_overcast"
+    "_overcast",
+    "_rain"
 ];
 
 /*
@@ -79,6 +80,23 @@ else {
 
 // Add value to environment array.
 environment = environment + [["overcast", _overcast]];
+
+/*
+    Set rain.
+*/
+if (missionRain < 0) then {
+    _availableValues = getArray (missionConfigFile >> "Params" >> "missionRain" >> "values");
+
+    _rain = _availableValues select ([1, (count _availableValues - 1)] call BIS_fnc_randomInt);
+}
+else {
+    _rain = missionRain;
+};
+
+// Add value to environment array.
+environment = environment + [["rain", _rain]];
+
+
 
 /*
     Accept variable.
