@@ -28,4 +28,11 @@
     Spawn Jeep:
         jeep = createVehicle ["C_SUV_01_F", getPos player, [], 0, "NONE"];
 
+    Spawn Light:
+        light = "#lightpoint" createvehicle position player;
+        light setLightBrightness 1;
+        light setLightAmbient [1, 1, 1];
+        light setLightColor [1, 1, 1];
+        light setpos [4314.7, 4328.57, 0.1];
+
 */
