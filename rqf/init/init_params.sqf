@@ -7,8 +7,8 @@
  */
 
 private [
-	"_value",
-	"_name"
+    "_value",
+    "_name"
 ];
 
 for "_index" from 0 to (count paramsArray) - 1 do {
