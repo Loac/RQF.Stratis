@@ -6,18 +6,23 @@
         Client side procedures in freeze time.
 */
 
+private [
+    "_freezeMarker"
+];
+
 /*
     Control player position.
 */
 
 // Get marker of start position.
 switch (playerSide) do {
-    case west: { _startMarker = "FREEZE" };
+    case west: { _freezeMarker = "BLUESTART" };
+    case east: { _freezeMarker = "REDSTART" };
 };
 
 // Get marker parameters.
-_freezePosition = getMarkerPos "FREEZE";
-_freezeRange = (getMarkerSize "FREEZE") select 0;
+_freezePosition = getMarkerPos _freezeMarker;
+_freezeRange = (getMarkerSize _freezeMarker) select 0;
 
 // Show timer.
 _null = execVM "ui\ui_freezeTimer.sqf";
@@ -40,8 +45,8 @@ waitUntil {
 
        // Move player back.
         player setPos [
-            ((_freezePosition select 0) + (sin (_freezeDir + 180)) * (_freezeRange - 1)),
-            ((_freezePosition select 1) + (cos (_freezeDir + 180)) * (_freezeRange - 1)),
+            ((_freezePosition select 0) + (sin (_freezeDir + 180)) * (_freezeRange - 10)),
+            ((_freezePosition select 1) + (cos (_freezeDir + 180)) * (_freezeRange - 10)),
             0
         ];
 
@@ -52,7 +57,7 @@ waitUntil {
     // No need to a lot of checks.
     sleep 1;
 
-    freezeOver;
+    freezeTime < 0;
 };
 
 

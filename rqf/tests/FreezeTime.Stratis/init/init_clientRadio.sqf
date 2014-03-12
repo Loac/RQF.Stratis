@@ -15,16 +15,14 @@ trgCondition = {
 trgActivation = {
 	switch (playerSide) do {
 		case west: {
-			player globalChat "Blue is ready";
-			blueReady = 0; publicVariable "blueReady";
+			blueReady = true;
+			publicVariable "blueReady";
 		};
 		case east: {
-			player globalChat "Red is ready";
-			redReady = 0; publicVariable "redReady";
+			redReady = true;
+			publicVariable "redReady";
 		};
 	};
-
-//    freezeOver = true;
 };
 
 _trigger = createTrigger["EmptyDetector", [0, 0, 0]];

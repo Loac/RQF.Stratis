@@ -12,15 +12,29 @@ _rscTimer = uiNamespace getVariable "rscTimer";
 // Get control display.
 _ctrlDisplay = _rscTimer displayCtrl 1001;
 
+// Get control icons.
+_ctrlBlueIcon = _rscTimer displayCtrl 1002;
+_ctrlRedIcon = _rscTimer displayCtrl 1003;
+
 waitUntil {
     // Get new timer value.
     _timer = [freezeTime] call ft_fnc_timeToTimer;
 
     // Set new text.
-    _ctrlDisplay ctrlSetText _timer; sleep 1;
+    _ctrlDisplay ctrlSetText _timer;
+
+    if (blueReady) then {
+        _ctrlBlueIcon ctrlSetBackgroundColor [0, 0.3, 0.6, 0.8];
+    };
+
+    if (redReady) then {
+        _ctrlRedIcon ctrlSetBackgroundColor [0.5, 0, 0, 0.8];
+    };
+
+    sleep 1;
 
     // Wait end of freeze.
-    freezeOver;
+    freezeTime < 0;
 };
 
 // Hide layer.

@@ -1,12 +1,6 @@
-// Get this value from params.
-freezeTime = 60;
-
-// Global variable.
-freezeOver = false;
-
 // Flags for early start.
-blueReady = 1;
-redReady = 2;
+blueReady = false;
+redReady = false;
 
 // Init server side.
 if (isServer) then {
