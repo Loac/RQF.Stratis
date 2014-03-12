@@ -24,4 +24,5 @@ if (not isDedicated) then {
 
     _null = execVM "init\init_clientRadio.sqf";
     _null = execVM "init\init_clientFreeze.sqf";
+    // _null = execVM "init\init_clientFreezeByTrigger.sqf";
 };
