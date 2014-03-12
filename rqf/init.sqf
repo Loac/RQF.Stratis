@@ -26,6 +26,11 @@
             Flag to start mission.
         environment
             Array with environment settings.
+        blueReady
+        redReady
+            Flags for ready sides.
+        sizePosition
+            Size of start side positions. Need for teleport and freeze time.
 
     See:
         https://community.bistudio.com/wiki/6thSense.eu:EG
@@ -38,10 +43,13 @@ if (isServer) then {
     _handle = [] execVM "rqf\init\init_params.sqf"; waitUntil { scriptDone _handle };
 
     // Set and broadcast flag startMission and targetDistance value.
-    _null = [
+    _handle = [
         ["startMission", false],
+        ["blueReady", false],
+        ["redReady", false],
         ["environment", []],
-        ["targetDistance"]
+        ["targetDistance"],
+        ["sizePosition"]
     ] call rqf_fnc_broadcast;
 
     /*
@@ -80,10 +88,17 @@ if (isServer) then {
     /*
         Add waypoints for AI.
     */
-    _null = [] execVM "rqf\init\init_ai.sqf";
+    _handle = [] execVM "rqf\init\init_ai.sqf";
+
+    /*
+        Init freeze time.
+    */
+    if (freezeTime > 0) then {
+        _handle = execVM "rqf\init\init_freeze.sqf";
+    };
 
     // Flag to start mission.
-    _null = [["startMission", true]] call rqf_fnc_broadcast;
+    _handle = [["startMission", true]] call rqf_fnc_broadcast;
 };
 
 if (not isDedicated) then {
@@ -102,7 +117,7 @@ if (not isDedicated) then {
     */
     if (not isMultiplayer) then {
         _handle = [] execVM "rqf\init\init_devel.sqf";
-    }
+    };
 };
 
 // Переместить камеру к таргету.

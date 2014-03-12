@@ -1,29 +1,23 @@
 /*
     Author:
         Dmitry Loac.
+
+    Description:
+        Add freeze timer.
 */
 
-// Get this value from params.
-freezeTime = 60;
-
-// Global variable.
-freezeOver = false;
-
-// Flags for early start.
-blueReady = 1;
-redReady = 2;
-
 // Init freeze timer.
-[] spawn {
-    waitUntil {
-    	// Decrease value timer.
-        freezeTime = freezeTime - 1; publicVariable "freezeTime";
-        sleep 1;
+waitUntil {
+    // Decrease value timer.
+    _handle = [["freezeTime", freezeTime - 1]] call rqf_fnc_broadcast;
 
-        // Wait for timer is over or both sides is ready.
-        (freezeTime == 0) || (blueReady == redReady);
+    // Skip freeze time if both sides agree.
+    if (freezeTime > 5 and blueReady and redReady) then {
+        _handle = [["freezeTime", 5]] call rqf_fnc_broadcast;
     };
 
-    // Freeze is over.
-    freezeOver = true; publicVariable "freezeOver";
+    sleep 1;
+
+    // Wait for timer is over or both sides is ready.
+    freezeTime < 0;
 };

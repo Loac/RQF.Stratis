@@ -9,3 +9,4 @@ author = "Loac";
 #include "rqf\configs\cfgParams.hpp"
 #include "rqf\configs\cfgFunctions.hpp"
 #include "rqf\configs\cfgDebriefing.hpp"
+#include "rqf\configs\cfgRscTitles.hpp"

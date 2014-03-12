@@ -43,8 +43,8 @@ waitUntil { time > 2 }; // Strange pause for dedicated server.
 } forEach allUnits;
 
 // Find place for teleport.
-_bluePlaces = selectBestPlaces [bluePosition, 50, "meadow", 5, _blueCount];
-_redPlaces = selectBestPlaces [redPosition, 50, "meadow", 5, _redCount];
+_bluePlaces = selectBestPlaces [bluePosition, sizePosition, "meadow", 5, _blueCount];
+_redPlaces = selectBestPlaces [redPosition, sizePosition, "meadow", 5, _redCount];
 
 // Teleport.
 _blueIndex = 0;

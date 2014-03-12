@@ -2,25 +2,39 @@
     Author:
         Dmitry Loac.
 
+    External variables:
+        sizePosition
+
     Description:
-    	Client side procedures in freeze time.
+        Client side procedures in freeze time.
 */
 
+private [
+    "_playerPosition",
+    "_freezeMarker",
+    "_freezePosition",
+    "_freezeRange",
+    "_freezeDir"
+];
+
 /*
-	Control player position.
+    Control player position.
 */
 
 // Get marker of start position.
 switch (playerSide) do {
-	case west: { _startMarker = "BLUESTART" };
-	case east: { _startMarker = "REDSTART" };
+    case west: { _freezeMarker = "BLUESTART" };
+    case east: { _freezeMarker = "REDSTART" };
 };
 
 // Get marker parameters.
-_freezePosition = getMarkerPos "BLUESTART";
-_freezeRange = (getMarkerSize "BLUESTART") select 0;
+_freezePosition = getMarkerPos _freezeMarker;
+_freezeRange = sizePosition;
 
-// Wait flag "freezeOver".
+// Show timer.
+_null = execVM "rqf\ui\ui_freezeTimer.sqf";
+
+// Wait freezeTime is over.
 waitUntil {
     _playerPosition = position player;
 
@@ -28,15 +42,10 @@ waitUntil {
     if (_playerPosition distance _freezePosition > _freezeRange) then {
 
         // Fade out screen.
-        cutText ["Please, wait to start mission.", "BLACK OUT", 1];
+        cutText ["Please, wait to start mission.", "BLACK OUT", 0.5];
 
         // Wait fade out, before set position.
         sleep 1;
-
-        // Hold player.
-        _camera = "camera" camCreate (position player);
-        _camera cameraEffect ["internal", "BACK"];
-        //_camera camCommit 0;
 
         // Get direction to center of start position.
        _freezeDir = ([_playerPosition, _freezePosition] call bis_fnc_dirTo);
@@ -48,20 +57,12 @@ waitUntil {
             0
         ];
 
-        // Wait for message.
-        sleep 2;
-
         // Fade in screen.
-        _camera cameraEffect ["terminate", "BACK"];
-	    //_camera camCommit 0;
-    	camDestroy _camera;
-        cutText ["", "BLACK IN", 2];
+        cutText ["", "BLACK IN", 0.5];
     };
-
-    hint format["To start mission: %1", freezeTime];
 
     // No need to a lot of checks.
     sleep 1;
 
-    freezeOver;
+    freezeTime < 0;
 };

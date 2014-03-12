@@ -21,6 +21,9 @@ for "_index" from 0 to (count paramsArray) - 1 do {
 // Position of target.
 targetPosition = [];
 
+// Variable for init teleport and freeze. time
+sizePosition = 50;
+
 // Coordinates of side start.
 bluePosition = [];
 redPosition = [];
@@ -36,3 +39,7 @@ redUnits = 0;
 // Timers.
 blueTimer = sideTimer;
 redTimer = sideTimer;
+
+// Flags for early start.
+blueReady = false;
+redReady = false;

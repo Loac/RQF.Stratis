@@ -64,3 +64,12 @@ cutText ["", "BLACK IN", 2];
 
 // Radio on.
 enableRadio true;
+
+// Add radio commands.
+_handle = execVM "rqf\init\init_clientRadio.sqf";
+
+// If freeze time is enabled.
+if (freezeTime > 0) then {
+    // Init freeze.
+    _handle = execVM "rqf\init\init_clientFreeze.sqf";
+};
