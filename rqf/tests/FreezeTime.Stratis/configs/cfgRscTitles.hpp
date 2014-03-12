@@ -5,7 +5,8 @@
 
 class RscTitles
 {
-    class RscTimer {
+    class RscTimer
+    {
         idd = 1000;
         duration = 1e+011;
         onLoad = "uiNamespace setVariable ['rscTimer', _this select 0];";
@@ -16,7 +17,8 @@ class RscTitles
         objects[] = { };
         controls[] = { Display };
 
-        class Display {
+        class Display
+        {
             idc = 1001;
             moving = false;
             type = CT_STATIC;
