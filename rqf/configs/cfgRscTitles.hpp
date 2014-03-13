@@ -52,11 +52,10 @@ class RscTitles
         {
             idc = 1003;
             colorBackground[] = { 0, 0, 0, 0.2 };
-            x = 0.56; // Fix 1 px bug.
+            x = 0.56;
             y = 0;
             w = 0.06 * 3 / 4;
             h = 0.06;
         };
-
     };
 };
