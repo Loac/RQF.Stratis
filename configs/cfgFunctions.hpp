@@ -14,6 +14,7 @@ class CfgFunctions
             class endMission { description = "Initialisation end mission."; };
             class setEnvironment { description = "Set environment."; };
             class timeToTimer { description = "Convert time to string fomat 00:00."; };
+            class getRandomValue { description = "Get random value from parameter."; };
         };
     };
 };

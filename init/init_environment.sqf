@@ -57,11 +57,8 @@ _minute = [1, 59] call BIS_fnc_randomInt;
     // If value less 0, then it random environment.
     // Env params "envSeason" and "envTime" will be in environment array, but "rqf_fnc_setEnvironment" just ignore it.
     if (_envValue < 0) then {
-        // Get available values.
-        _availableValues = getArray (missionConfigFile >> "Params" >> _envName >> "values");
-
-        // Select one.
-        _envValue = _availableValues select ([1, (count _availableValues - 1)] call BIS_fnc_randomInt);
+        // Get random value.
+        _envValue = [_envName] call rqf_fnc_getRandomValue;
     }
     else {
         // Replace random values.
