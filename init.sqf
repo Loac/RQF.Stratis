@@ -1,1 +1,0 @@
-_null = [] execVM "rqf\init.sqf";
