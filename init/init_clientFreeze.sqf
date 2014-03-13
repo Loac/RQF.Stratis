@@ -32,7 +32,7 @@ _freezePosition = getMarkerPos _freezeMarker;
 _freezeRange = sizePosition;
 
 // Show timer.
-_null = execVM "rqf\ui\ui_freezeTimer.sqf";
+_null = execVM "ui\ui_freezeTimer.sqf";
 
 // Wait freezeTime is over.
 waitUntil {

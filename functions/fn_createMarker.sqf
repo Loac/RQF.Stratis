@@ -29,7 +29,7 @@
             Not used now.
 
     Example:
-        _marker = ["MARKER", position player, [["type", "mil_dot"], ["text", "I'am here."]]] execVM "rqf\functions\fn_createMarker.sqf";
+        _marker = ["MARKER", position player, [["type", "mil_dot"], ["text", "I'am here."]]] execVM "functions\fn_createMarker.sqf";
         _marker = ["MARKER", position player, [["shape", "ELLIPSE"], ["size", [50, 50]]]] call rqf_fnc_createMarker;
 
     See:

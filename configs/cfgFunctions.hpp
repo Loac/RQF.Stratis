@@ -4,7 +4,7 @@ class CfgFunctions
     {
         class functions
         {
-            file = "rqf\functions";
+            file = "functions";
 
             class createMarker { description = "Creates marker with given params."; };
             class getZoneMarkers { description = "Find all palyable markers."; };

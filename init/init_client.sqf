@@ -41,7 +41,7 @@ waitUntil { count environment > 0 };
 // ctrlMapAnimCommit _mapCtrl;
 
 // Show intro.
-_handle = [] call compile preprocessFileLineNumbers "rqf\init\init_clientIntro.sqf";
+_handle = [] call compile preprocessFileLineNumbers "init\init_clientIntro.sqf";
 waitUntil { scriptDone _handle };
 
 // Fade out screen.
@@ -66,10 +66,10 @@ cutText ["", "BLACK IN", 2];
 enableRadio true;
 
 // Add radio commands.
-_handle = execVM "rqf\init\init_clientRadio.sqf";
+_handle = execVM "init\init_clientRadio.sqf";
 
 // If freeze time is enabled.
 if (freezeTime > 0) then {
     // Init freeze.
-    _handle = execVM "rqf\init\init_clientFreeze.sqf";
+    _handle = execVM "init\init_clientFreeze.sqf";
 };

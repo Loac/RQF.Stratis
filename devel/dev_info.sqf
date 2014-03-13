@@ -15,7 +15,7 @@
         windDir
 
     Example:
-        _null = player addAction ["God mode", "rqf\devel\dev_info.sqf"];
+        _null = player addAction ["God mode", "devel\dev_info.sqf"];
 */
 
 private [

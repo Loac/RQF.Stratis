@@ -40,7 +40,7 @@ if (isServer) then {
     /*
         Set parameters.
     */
-    _handle = [] execVM "rqf\init\init_params.sqf"; waitUntil { scriptDone _handle };
+    _handle = [] execVM "init\init_params.sqf"; waitUntil { scriptDone _handle };
 
     // Set and broadcast flag startMission and targetDistance value.
     _handle = [
@@ -59,43 +59,43 @@ if (isServer) then {
             bluePosition
             redPosition
     */
-    _handle = [] execVM "rqf\init\init_zones.sqf"; waitUntil { scriptDone _handle };
+    _handle = [] execVM "init\init_zones.sqf"; waitUntil { scriptDone _handle };
 
     /*
         Initialize environment: fog, time and etc.
     */
-    _handle = [] execVM "rqf\init\init_environment.sqf";
+    _handle = [] execVM "init\init_environment.sqf";
 
     /*
         Set triggers.
     */
-    _handle = [] execVM "rqf\init\init_triggers.sqf";
+    _handle = [] execVM "init\init_triggers.sqf";
 
     /*
         Teleport all units to start positions.
     */
-    _handle = [] execVM "rqf\init\init_positions.sqf";
+    _handle = [] execVM "init\init_positions.sqf";
 
     /*
         Set arbiter.
     */
-    _handle = [] execVM "rqf\init\init_arbiter.sqf";
+    _handle = [] execVM "init\init_arbiter.sqf";
 
     /*
         Set markers for players.
     */
-    _handle = [] execVM "rqf\init\init_markers.sqf";
+    _handle = [] execVM "init\init_markers.sqf";
 
     /*
         Add waypoints for AI.
     */
-    _handle = [] execVM "rqf\init\init_ai.sqf";
+    _handle = [] execVM "init\init_ai.sqf";
 
     /*
         Init freeze time.
     */
     if (freezeTime > 0) then {
-        _handle = execVM "rqf\init\init_freeze.sqf";
+        _handle = execVM "init\init_freeze.sqf";
     };
 
     // Flag to start mission.
@@ -111,13 +111,13 @@ if (not isDedicated) then {
     /*
         Client side procedures.
     */
-    _handle = [] execVM "rqf\init\init_client.sqf";
+    _handle = [] execVM "init\init_client.sqf";
 
     /*
         Development.
     */
     if (not isMultiplayer) then {
-        _handle = [] execVM "rqf\init\init_devel.sqf";
+        _handle = [] execVM "init\init_devel.sqf";
     };
 };
 

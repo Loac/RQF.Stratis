@@ -5,8 +5,8 @@ onLoadName = "RQF Stratis";
 onLoadMission = "Good luck";
 author = "Loac";
 
-#include "rqf\configs\cfgHeader.hpp"
-#include "rqf\configs\cfgParams.hpp"
-#include "rqf\configs\cfgFunctions.hpp"
-#include "rqf\configs\cfgDebriefing.hpp"
-#include "rqf\configs\cfgRscTitles.hpp"
+#include "configs\cfgHeader.hpp"
+#include "configs\cfgParams.hpp"
+#include "configs\cfgFunctions.hpp"
+#include "configs\cfgDebriefing.hpp"
+#include "configs\cfgRscTitles.hpp"
