@@ -24,6 +24,11 @@ targetPosition = [];
 // Variable for init teleport and freeze. time
 sizePosition = 50;
 
+// Get random value for sideDeviation (max possible deviation).
+if (sideDeviation < 0) then {
+	sideDeviation = ["sideDeviation"] call rqf_fnc_getRandomValue;
+};
+
 // Coordinates of side start.
 bluePosition = [];
 redPosition = [];

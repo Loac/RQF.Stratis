@@ -3,24 +3,24 @@ class Params
     class targetSize
     {
         title = "Target size";
-        values[] = { 10, 50, 100, 150, 200 };
-        texts[] = { "10", "50", "100", "150", "200" };
+        values[] = { 50, 100, 150, 200 };
+        texts[] = { "50", "100", "150", "200" };
         default = 50;
     };
 
     class targetDistance
     {
         title = "Target distance";
-        values[] = { 100, 200, 300, 500, 600 };
-        texts[] = { "100", "200", "300", "400", "500", "600" };
+        values[] = { 200, 300, 500, 600 };
+        texts[] = { "200", "300", "400", "500", "600" };
         default = 200;
     };
 
     class sideDeviation
     {
         title = "Side deviation";
-        values[] = { 0, 50, 100, 200 };
-        texts[] = { "0", "50", "100", "200" };
+        values[] = { -1, 0, 50, 75, 125 };
+        texts[] = { "Random", "0", "50", "75", "125" };
         default = 50;
     };
 
