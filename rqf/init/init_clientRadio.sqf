@@ -17,25 +17,24 @@ private [
     "_trigger"
 ];
 
-// Condition: Who can set ready side.
-trgCondition = {
-    isFormationLeader player;
-};
-
-// Action radio.
-trgActivation = {
-    switch (playerSide) do {
-        case west: {
-            _handle = [["blueReady", true]] call rqf_fnc_broadcast;
-        };
-        case east: {
-            _handle = [["redReady", true]] call rqf_fnc_broadcast;
+// Add radio only for leader formation.
+if (isFormationLeader player) then {
+    // Action radio.
+    trgActivation = {
+        switch (playerSide) do {
+            case west: {
+                _handle = [["blueReady", true]] call rqf_fnc_broadcast;
+            };
+            case east: {
+                _handle = [["redReady", true]] call rqf_fnc_broadcast;
+            };
         };
     };
+
+    // Trigger for radio.
+    _trigger = createTrigger["EmptyDetector", [0, 0, 0]];
+    _trigger setTriggerActivation["ALPHA", "PRESENT", true];
+    _trigger setTriggerText "Ready";
+    _trigger setTriggerStatements["this", "[] call trgActivation", ""];
 };
 
-// Trigger for radio.
-_trigger = createTrigger["EmptyDetector", [0, 0, 0]];
-_trigger setTriggerActivation["ALPHA", "PRESENT", true];
-_trigger setTriggerText "Ready";
-_trigger setTriggerStatements["[] call trgCondition", "[] call trgActivation", ""];
