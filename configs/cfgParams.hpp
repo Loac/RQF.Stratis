@@ -88,19 +88,12 @@ class Params
         default = -1;
     };
 
-    class blueAI
+    class aiEnable
     {
-        title = "Enable blue side AI (not work yet)";
-        values[] = { true, false };
-        texts[] = { "Yes", "No" };
-        default = false;
+        title = "Enable AI";
+        values[] = { 0, 1 };
+        texts[] = { "Off", "On" };
+        default = 1;
     };
 
-    class redAI
-    {
-        title = "Enable red side AI (not work yet)";
-        values[] = { true, false };
-        texts[] = { "Yes", "No" };
-        default = false;
-    };
 };

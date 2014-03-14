@@ -21,30 +21,56 @@ private [
     "_isAI"
 ];
 
-// Wait freezeTime is over.
-waitUntil { freezeTime < 0 };
-
-// Waypoints for bots.
+// Disable AI.
 {
-    // Add waypoints for groups where player not leader.
-    _isAI = true;
+    _x allowFleeing 0;
+    _x disableAI "AUTOTARGET";
+    _x disableAI "ANIM";
+    _x disableAI "FSM";
+    _x disableAI "MOVE";
+    _x disableAI "PATHPLAN";
+} foreach allUnits;
 
-    // Check all units in group.
+// If AI is enabled.
+if (aiEnable > 0) then {
+    // Wait freezeTime is over.
+    waitUntil { freezeTime < 0 };
+
+    // Waypoints for bots.
     {
-        if (isPlayer _x && isFormationLeader _x) then {
-            _isAI = false;
+        // Add waypoints for groups where player not leader.
+        _isAI = true;
+
+        // Check all units in group.
+        {
+            if (isPlayer _x && isFormationLeader _x) then {
+                _isAI = false;
+            };
+
+            // No reason check next unit.
+            if (_isAI) exitWith {};
+        } forEach units _x;
+
+        // Set random waypoints into target marker.
+        if (_isAI) then {
+            _waypoint = _x addWaypoint[targetPosition, targetSize];
+            _waypoint setWaypointType "HOLD";
+            // _waypoint setWaypointSpeed "FULL";
+            // _waypoint setWaypointBehaviour "COMBAT";
         };
 
-        // No reason check next unit.
-        if (_isAI) exitWith {};
-    } forEach units _x;
+    } forEach allGroups;
 
-    // Set random waypoints into target marker.
-    if (_isAI) then {
-        _waypoint = _x addWaypoint[targetPosition, targetSize];
-        _waypoint setWaypointType "HOLD";
-        // _waypoint setWaypointSpeed "FULL";
-        // _waypoint setWaypointBehaviour "COMBAT";
-    };
+    // Enable AI.
+    {
+        _x enableAI "AUTOTARGET";
+        _x enableAI "ANIM";
+        _x enableAI "FSM";
+        _x enableAI "MOVE";
+        _x enableAI "PATHPLAN";
+    } foreach allUnits;
+};
 
-} forEach allGroups;
+
+
+
