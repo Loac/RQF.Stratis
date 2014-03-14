@@ -29,6 +29,9 @@ enableSaving [false, false];
 // Delete zone markers.
 [] call rqf_fnc_deleteZoneMarkers;
 
+// Init briefing.
+_handle = [] execVM "init\init_briefing.sqf";
+
 // Wait variable environment and set it.
 waitUntil { count environment > 0 };
 [environment] call rqf_fnc_setEnvironment;
