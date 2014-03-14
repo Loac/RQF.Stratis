@@ -29,6 +29,9 @@ enableSaving [false, false];
 // Delete zone markers.
 [] call rqf_fnc_deleteZoneMarkers;
 
+// Disable AI.
+_handle = [false] execVM "init\init_aiControl.sqf";
+
 // Init briefing.
 _handle = [] execVM "init\init_briefing.sqf";
 
@@ -74,5 +77,10 @@ _handle = execVM "init\init_clientRadio.sqf";
 // If freeze time is enabled.
 if (freezeTime > 0) then {
     // Init freeze.
-    _handle = execVM "init\init_clientFreeze.sqf";
+    _handle = execVM "init\init_clientFreeze.sqf"; waitUntil { scriptDone _handle };
+};
+
+// If AI enabled.
+if (aiEnable > 0) then {
+    _handle = [true] execVM "init\init_aiControl.sqf";
 };

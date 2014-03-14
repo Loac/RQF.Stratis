@@ -22,15 +22,7 @@ private [
     "_isAI"
 ];
 
-// Disable AI.
-{
-    _x allowFleeing 0;
-    _x disableAI "AUTOTARGET";
-    _x disableAI "ANIM";
-    _x disableAI "FSM";
-    _x disableAI "MOVE";
-    _x disableAI "PATHPLAN";
-} foreach allUnits;
+_handle = [false] execVM "init\init_aiControl.sqf";
 
 // If AI is enabled.
 if (aiEnable > 0) then {
@@ -62,16 +54,5 @@ if (aiEnable > 0) then {
 
     } forEach allGroups;
 
-    // Enable AI.
-    {
-        _x enableAI "AUTOTARGET";
-        _x enableAI "ANIM";
-        _x enableAI "FSM";
-        _x enableAI "MOVE";
-        _x enableAI "PATHPLAN";
-    } foreach allUnits;
+    _handle = [true] execVM "init\init_aiControl.sqf";
 };
-
-
-
-

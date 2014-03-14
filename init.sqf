@@ -31,6 +31,8 @@
             Flags for ready sides.
         sizePosition
             Size of start side positions. Need for teleport and freeze time.
+        aiEnable
+            Flag for enable or disable AI.
 
     See:
         https://community.bistudio.com/wiki/6thSense.eu:EG
@@ -50,7 +52,8 @@ if (isServer) then {
         ["environment", []],
         ["targetDistance"],
         ["freezeTime"],
-        ["sizePosition"]
+        ["sizePosition"],
+        ["aiEnable"]
     ] call rqf_fnc_broadcast;
 
     /*
@@ -74,7 +77,7 @@ if (isServer) then {
     /*
         Teleport all units to start positions.
     */
-    _handle = [] execVM "init\init_positions.sqf";
+    _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
 
     /*
         Set arbiter.
@@ -123,8 +126,9 @@ if (not isDedicated) then {
 
 // Переместить камеру к таргету.
 
+// Не телепортировать ботов, если они отключены.
+
 // Добавить параметры дальности, травы, вида от третьего лица.
-    // Приверить как это работат в мультиплеере.
 
 // Брифинг.
 
