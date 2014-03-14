@@ -24,6 +24,14 @@ class Params
         default = 50;
     };
 
+    class sideRatio
+    {
+        title = "Winner by side ratio in percentages";
+        values[] = { 0, 5, 10, 25, 50 };
+        texts[] = { "Off", "5", "10", "25", "50" };
+        default = 25;
+    };
+
     class sideTimer
     {
         title = "Hold time positions";

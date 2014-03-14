@@ -7,6 +7,9 @@
         redTimer
         blueHold
         redHold
+        blueRatio
+        redRatio
+        sideRatio
 */
 
 private [
@@ -24,13 +27,13 @@ waitUntil {
     _null = [] call rqf_fnc_updateRatio;
 
     // If blue dominate. Ratios in percent.
-    if (redRatio < 51) then {
+    if (redRatio < sideRatio) then {
         _scenario = "blueDominate";
         _winner = west;
     };
 
-    // // If red dominate.
-    if (blueRatio < 51) then {
+    // If red dominate.
+    if (blueRatio < sideRatio) then {
         _scenario = "redDominate";
         _winner = east;
     };
