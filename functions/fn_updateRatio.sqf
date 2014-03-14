@@ -25,7 +25,7 @@ redUnits = 0;
 
 } forEach allUnits;
 
-// Ratio by percent for exclude zero divided.
+// Ratio by percent.
 redRatio = 100 / blueUnits * redUnits;
 blueRatio = 100 / redUnits * blueUnits;
 
