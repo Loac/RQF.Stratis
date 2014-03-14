@@ -26,14 +26,14 @@ waitUntil {
     // Update ratio.
     _null = [] call rqf_fnc_updateRatio;
 
-    // If red dominate.
-    if (blueRatio < sideRatio) then {
+    // If blue dominate. Ratios in percent.
+    if (redRatio < sideRatio) then {
         _scenario = "blueDominate";
         _winner = west;
     };
 
-    // If blue dominate. Ratios in percent.
-    if (redRatio < sideRatio) then {
+    // If red dominate.
+    if (blueRatio < sideRatio) then {
         _scenario = "redDominate";
         _winner = east;
     };
