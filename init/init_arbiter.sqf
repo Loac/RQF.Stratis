@@ -24,7 +24,7 @@ waitUntil {
     sleep 1;
 
     // Update ratio.
-    _null = [] call rqf_fnc_updateRatio;
+    _handle = [] call rqf_fnc_updateRatio;
 
     // If blue dominate. Ratios in percent.
     if (redRatio < sideRatio) then {
