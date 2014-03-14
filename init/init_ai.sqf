@@ -8,6 +8,7 @@
     External variables:
         targetPosition
         targetSize
+        freezeTime
 
     See:
         https://community.bistudio.com/wiki/Mission_Editor:_Waypoints
@@ -20,6 +21,10 @@ private [
     "_isAI"
 ];
 
+// Wait freezeTime is over.
+waitUntil { freezeTime < 0 };
+
+// Waypoints for bots.
 {
     // Add waypoints for groups where player not leader.
     _isAI = true;
