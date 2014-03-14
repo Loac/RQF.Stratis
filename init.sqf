@@ -77,7 +77,7 @@ if (isServer) then {
     /*
         Teleport all units to start positions.
     */
-    _handle = [] execVM "init\init_positions.sqf"; waitUntil { scriptDone _handle };
+    _handle = [] execVM "init\init_positions.sqf";
 
     /*
         Set arbiter.
