@@ -13,7 +13,9 @@
 
     See:
         https://community.bistudio.com/wiki/Mission_Editor:_Waypoints
-        https://community.bistudio.com/wiki/setWaypointType
+        https://community.bistudio.com/wiki/ArmA:_AI_Combat_Modes
+        setWaypointType
+        CfgAISkill
 */
 
 private [
@@ -48,8 +50,9 @@ if (aiEnable > 0) then {
         if (_isAI) then {
             _waypoint = _x addWaypoint[targetPosition, targetSize];
             _waypoint setWaypointType "HOLD";
-            // _waypoint setWaypointSpeed "FULL";
-            // _waypoint setWaypointBehaviour "COMBAT";
+
+            _x setBehaviour "COMBAT";
+            _x setSpeedMode "FULL";
         };
 
     } forEach allGroups;
