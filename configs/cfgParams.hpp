@@ -2,7 +2,7 @@ class Params
 {
     class targetSize
     {
-        title = "Target size";
+        title = "$STR_RQF_params_targetSize";
         values[] = { 50, 100, 150, 200 };
         texts[] = { "50", "100", "150", "200" };
         default = 50;
@@ -10,7 +10,7 @@ class Params
 
     class targetDistance
     {
-        title = "Target distance";
+        title = "$STR_RQF_params_targetDistance";
         values[] = { 200, 300, 500, 600 };
         texts[] = { "200", "300", "400", "500", "600" };
         default = 200;

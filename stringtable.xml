@@ -26,4 +26,14 @@
             <Russian>Красные доминируют</Russian>
         </Key>
     </Package>
+    <Package name="Params">
+        <Key ID="STR_RQF_params_targetSize">
+            <Original>Target size</Original>
+            <Russian>Радиус зоны удержания</Russian>
+        </Key>
+        <Key ID="STR_RQF_params_targetDistance">
+            <Original>Target distance</Original>
+            <Russian>Расстояние до цели</Russian>
+        </Key>
+    </Package>
 </Project>
