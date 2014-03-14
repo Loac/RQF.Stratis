@@ -9,6 +9,7 @@
         targetPosition
         targetSize
         freezeTime
+        aiEnable
 
     See:
         https://community.bistudio.com/wiki/Mission_Editor:_Waypoints
