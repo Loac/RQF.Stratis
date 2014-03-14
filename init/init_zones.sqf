@@ -14,6 +14,7 @@
     External variables:
         targetDistance / param
         sideDeviation  / param
+        targetSize / param
         targetPosition
         bluePosition
         redPosition
@@ -58,8 +59,8 @@ while {not _blueReady || not _redReady} do {
     while {not _blueReady && _try < _tryForPosition} do {
         _blueDegrees = random 360;
         bluePosition = [
-            (targetPosition select 0) + (sin _blueDegrees * targetDistance),
-            (targetPosition select 1) + (cos _blueDegrees * targetDistance)
+            (targetPosition select 0) + (sin _blueDegrees * (targetDistance + targetSize)),
+            (targetPosition select 1) + (cos _blueDegrees * (targetDistance + targetSize))
         ];
 
         // If it safe position for spawn.
@@ -75,8 +76,8 @@ while {not _blueReady || not _redReady} do {
     while {not _redReady && _try < _tryForPosition} do {
         _redDegrees = _blueDegrees + 180 + ([sideDeviation * -1, sideDeviation] call BIS_fnc_randomInt);
         redPosition = [
-            (targetPosition select 0) + (sin _redDegrees * targetDistance),
-            (targetPosition select 1) + (cos _redDegrees * targetDistance)
+            (targetPosition select 0) + (sin _redDegrees * (targetDistance + targetSize)),
+            (targetPosition select 1) + (cos _redDegrees * (targetDistance + targetSize))
         ];
 
         // If it safe position for spawn.
