@@ -3,21 +3,22 @@ class Mission
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
-		"A3_Characters_F_OPFOR"
+		"A3_Characters_F_OPFOR",
+		"a3_map_altis"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
 		"A3_Characters_F_OPFOR",
-		"a3_map_stratis"
+		"a3_map_altis"
 	};
-	randomSeed=11172025;
+	randomSeed=12863399;
 	class Intel
 	{
+		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
 		startWaves=0.1;
@@ -26,8 +27,8 @@ class Mission
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		year=2035;
-		month=7;
-		day=6;
+		month=6;
+		day=24;
 		hour=12;
 		minute=0;
 		startFogDecay=0.013;
@@ -44,7 +45,7 @@ class Mission
 				items=8;
 				class Item0
 				{
-					position[]={1591.5228,5.5,5081.5449};
+					position[]={14365.54,17.798643,15918.441};
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_SL_F";
@@ -55,17 +56,16 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1596.5228,5.5,5076.5449};
+					position[]={14370.54,17.798643,15913.441};
 					id=1;
 					side="WEST";
 					vehicle="B_Soldier_TL_F";
-					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
 				};
 				class Item2
 				{
-					position[]={1586.5228,5.5,5076.5449};
+					position[]={14360.54,17.790001,15913.441};
 					id=2;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
@@ -75,48 +75,43 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={1601.5228,5.5,5071.5449};
+					position[]={14375.54,17.798645,15908.441};
 					id=3;
 					side="WEST";
 					vehicle="B_soldier_AR_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 				class Item4
 				{
-					position[]={1581.5228,5.5,5071.5449};
+					position[]={14355.54,17.781979,15908.441};
 					id=4;
 					side="WEST";
 					vehicle="B_soldier_AAR_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 				class Item5
 				{
-					position[]={1606.5228,5.5,5066.5449};
+					position[]={14380.54,17.79459,15903.441};
 					id=5;
 					side="WEST";
 					vehicle="B_soldier_LAT_F";
-					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
 				class Item6
 				{
-					position[]={1576.5228,5.5,5066.5449};
+					position[]={14350.54,17.780001,15903.441};
 					id=6;
 					side="WEST";
 					vehicle="B_medic_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 				class Item7
 				{
-					position[]={1611.5228,5.5,5061.5449};
+					position[]={14385.54,17.790001,15898.441};
 					id=7;
 					side="WEST";
 					vehicle="B_Soldier_A_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 			};
@@ -129,87 +124,79 @@ class Mission
 				items=8;
 				class Item0
 				{
-					position[]={1826.1398,5.5,5920.9141};
+					position[]={15238.033,17.91,16808.84};
 					azimut=-162.533;
 					id=8;
 					side="EAST";
 					vehicle="O_Soldier_SL_F";
-					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
 				};
 				class Item1
 				{
-					position[]={1822.8718,5.5,5927.1841};
+					position[]={15234.766,17.91,16815.109};
 					azimut=-162.533;
 					id=9;
 					side="EAST";
 					vehicle="O_Soldier_TL_F";
-					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=0.5;
 				};
 				class Item2
 				{
-					position[]={1832.4121,5.5,5924.1865};
+					position[]={15244.306,17.91,16812.113};
 					azimut=-162.533;
 					id=10;
 					side="EAST";
 					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
 				class Item3
 				{
-					position[]={1819.605,5.5,5933.458};
+					position[]={15231.499,17.91,16821.383};
 					azimut=-162.533;
 					id=11;
 					side="EAST";
 					vehicle="O_Soldier_AR_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 				class Item4
 				{
-					position[]={1838.6825,5.5,5927.4492};
+					position[]={15250.576,17.91,16815.375};
 					azimut=-162.533;
 					id=12;
 					side="EAST";
 					vehicle="O_Soldier_AAR_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 				class Item5
 				{
-					position[]={1816.3367,5.5,5939.7305};
+					position[]={15228.23,17.91,16827.656};
 					azimut=-162.533;
 					id=13;
 					side="EAST";
 					vehicle="O_Soldier_LAT_F";
-					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.44999999;
 				};
 				class Item6
 				{
-					position[]={1844.9481,5.5,5930.7197};
+					position[]={15256.842,17.91,16818.645};
 					azimut=-162.533;
 					id=14;
 					side="EAST";
 					vehicle="O_medic_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 				class Item7
 				{
-					position[]={1813.063,5.5,5945.9951};
+					position[]={15224.956,17.91,16833.922};
 					azimut=-162.533;
 					id=15;
 					side="EAST";
 					vehicle="O_Soldier_F";
-					player="PLAY CDG";
 					skill=0.40000001;
 				};
 			};
@@ -217,36 +204,86 @@ class Mission
 	};
 	class Markers
 	{
-		items=3;
+		items=8;
 		class Item0
 		{
-			position[]={4697.0391,103.74242,5720.1191};
-			name="playableZone_3";
+			position[]={6605.5215,185.22238,20327.666};
+			name="ZONE1";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorOrange";
-			a=2200;
-			b=2200;
+			a=4000;
+			b=4000;
 		};
 		class Item1
 		{
-			position[]={2583.0837,80.615952,1416.0605};
-			name="playableZone_1";
+			position[]={26559.816,21.550394,23471.938};
+			name="ZONE3";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorOrange";
-			a=1000;
-			b=1000;
+			a=3000;
+			b=3000;
 		};
 		class Item2
 		{
-			position[]={3341.9646,118.67789,3411.0054};
-			name="playableZone_2";
+			position[]={14080.336,22.403296,18537.477};
+			name="ZONE4";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorOrange";
-			a=2000;
-			b=2000;
+			a=5000;
+			b=5000;
+		};
+		class Item3
+		{
+			position[]={8045.1543,151.41513,13005.919};
+			name="ZONE8";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=6000;
+			b=6000;
+		};
+		class Item4
+		{
+			position[]={23347.551,14.927842,20102.893};
+			name="ZONE2";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=3000;
+			b=3000;
+		};
+		class Item5
+		{
+			position[]={20530.773,31.462124,16247.155};
+			name="ZONE7";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=4000;
+			b=4000;
+		};
+		class Item6
+		{
+			position[]={11675.927,120.00625,7958.0474};
+			name="ZONE6";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=3000;
+			b=3000;
+		};
+		class Item7
+		{
+			position[]={19539.775,74.772835,9117.8291};
+			name="ZONE5";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorOrange";
+			a=5000;
+			b=5000;
 		};
 	};
 };
@@ -254,13 +291,13 @@ class Intro
 {
 	addOns[]=
 	{
-		"a3_map_stratis"
+		"a3_map_altis"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_stratis"
+		"a3_map_altis"
 	};
-	randomSeed=11704562;
+	randomSeed=5272121;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -272,8 +309,8 @@ class Intro
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		year=2035;
-		month=7;
-		day=6;
+		month=6;
+		day=24;
 		hour=12;
 		minute=0;
 		startFogDecay=0.013;
@@ -284,13 +321,13 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"a3_map_stratis"
+		"a3_map_altis"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_stratis"
+		"a3_map_altis"
 	};
-	randomSeed=16191710;
+	randomSeed=15098127;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -302,8 +339,8 @@ class OutroWin
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		year=2035;
-		month=7;
-		day=6;
+		month=6;
+		day=24;
 		hour=12;
 		minute=0;
 		startFogDecay=0.013;
@@ -314,13 +351,13 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"a3_map_stratis"
+		"a3_map_altis"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_stratis"
+		"a3_map_altis"
 	};
-	randomSeed=6156896;
+	randomSeed=10922899;
 	class Intel
 	{
 		timeOfChanges=1800.0002;
@@ -332,8 +369,8 @@ class OutroLoose
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		year=2035;
-		month=7;
-		day=6;
+		month=6;
+		day=24;
 		hour=12;
 		minute=0;
 		startFogDecay=0.013;
