@@ -18,47 +18,42 @@
 private [
     "_blueUnits",
     "_redUnits",
-    "_blueCount",
-    "_redCount",
-    "_blueIndex",
-    "_redIndex"
+    "_bluePlaces",
+    "_redPlaces"
 ];
 
 _blueUnits = [];
 _redUnits = [];
-_blueCount = 0;
-_redCount = 0;
-
-// _blueCount = playersNumber west;
-// _redCount = playersNumber east;
 
 // Strange pause for dedicated server.
-waitUntil { time > 3 };
+waitUntil { time > 1 };
 
 // Count the number of units.
 {
-    switch (side _x) do {
-        case west: { _blueCount = _blueCount + 1 };
-        case east: { _redCount = _redCount + 1 };
-   };
+    if (aiEnable > 0 or isPlayer _x) then {
+        switch (side _x) do {
+            case west: { _blueUnits = _blueUnits + [_x] };
+            case east: { _redUnits = _redUnits + [_x] };
+        };
+    };
 } forEach allUnits;
 
 // Find place for teleport.
-_bluePlaces = selectBestPlaces [bluePosition, sizePosition, "meadow", 5, _blueCount];
-_redPlaces = selectBestPlaces [redPosition, sizePosition, "meadow", 5, _redCount];
+_bluePlaces = selectBestPlaces [bluePosition, sizePosition, "meadow", 5, count _blueUnits];
+_redPlaces = selectBestPlaces [redPosition, sizePosition, "meadow", 5, count _redUnits];
 
-// Teleport.
-_blueIndex = 0;
-_redIndex = 0;
-{
-    switch (side _x) do {
-        case west: {
-            _x setPos ((_bluePlaces select _blueIndex) select 0);
-            _blueIndex = _blueIndex + 1;
-        };
-        case east: {
-            _x setPos ((_redPlaces select _redIndex) select 0);
-            _redIndex = _redIndex + 1;
-        };
-   };
-} forEach allUnits;
+// Teleport blue side.
+for "_index" from 0 to (count _blueUnits) - 1 do {
+    _unit = _blueUnits select _index;
+    _place = (_bluePlaces select _index) select 0;
+
+    _unit setPos _place;
+};
+
+// Teleport red side.
+for "_index" from 0 to (count _redUnits) - 1 do {
+    _unit = _redUnits select _index;
+    _place = (_redPlaces select _index) select 0;
+
+    _unit setPos _place;
+};
