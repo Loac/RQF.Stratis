@@ -19,47 +19,55 @@
 */
 
 private [
-    "_position",
-    "_radius",
-    "_isAI"
+    "_blueLeader",
+    "_redLeader"
 ];
 
 // Wait init_positions complited, because bots can't move by setPos after disable ANIM.
 waitUntil { time > 1 };
 
 // Disable AI.
-_handle = [false] execVM "init\init_aiControl.sqf";
+[false] execVM "init\init_aiControl.sqf";
 
 // If AI is enabled.
 if (aiEnable > 0) then {
-    // Wait freezeTime is over.
-    waitUntil { freezeTime < 0 };
 
-    // Waypoints for bots.
+    // Flags: player is leader of side.
+    _blueLeader = false;
+    _redLeader = false;
+
+    // Check leaders of groups.
     {
-        // Add waypoints for groups where player not leader.
-        _isAI = true;
-
-        // Check all units in group.
-        {
-            if (isPlayer _x && isFormationLeader _x) then {
-                _isAI = false;
+        if (isPlayer (leader _x)) then {
+            // If player leader at least one group, then he responsible ready side.
+            switch (side _x) do {
+                case west: { _blueLeader = true };
+                case east: { _redLeader = true };
             };
-
-            // No reason check next unit.
-            if (_isAI) exitWith {};
-        } forEach units _x;
-
-        // Set random waypoints into target marker.
-        if (_isAI) then {
+        }
+        else {
+            // If leader group is AI, set random waypoints into target marker.
             _waypoint = _x addWaypoint[targetPosition, targetSize];
             _waypoint setWaypointType "HOLD";
 
             _x setBehaviour "COMBAT";
             _x setSpeedMode "FULL";
         };
-
     } forEach allGroups;
 
-    _handle = [true] execVM "init\init_aiControl.sqf";
+    // If no blue player leader.
+    if (not _blueLeader) then {
+        [["blueReady", true]] call rqf_fnc_broadcast;
+    };
+
+    // If no red player leader.
+    if (not _redLeader) then {
+        [["redReady", true]] call rqf_fnc_broadcast;
+    };
+
+    // Wait freezeTime is over.
+    waitUntil { freezeTime < 0 };
+
+    // Enable AI.
+    [true] execVM "init\init_aiControl.sqf";
 };
