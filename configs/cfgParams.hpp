@@ -48,6 +48,14 @@ class Params
         default = 180;
     };
 
+    class playerTags
+    {
+        title = "Player tags";
+        values[] = { 0, 1 };
+        texts[] = { "Off", "On" };
+        default = 1;
+    };
+
     class envSeason
     {
         title = "Season";

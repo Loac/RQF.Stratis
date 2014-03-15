@@ -53,7 +53,8 @@ if (isServer) then {
         ["targetDistance"],
         ["freezeTime"],
         ["sizePosition"],
-        ["aiEnable"]
+        ["aiEnable"],
+        ["playerTags"]
     ] call rqf_fnc_broadcast;
 
     /*

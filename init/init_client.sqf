@@ -74,6 +74,11 @@ enableRadio true;
 // Add radio commands.
 _handle = execVM "init\init_clientRadio.sqf";
 
+// If player tags enabled.
+if (playerTags > 0) then {
+    _handle = [] execVM "init\init_clientTags.sqf";
+};
+
 // If freeze time is enabled.
 if (freezeTime > 0) then {
     // Init freeze.
