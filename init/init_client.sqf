@@ -39,13 +39,6 @@ _handle = [] execVM "init\init_briefing.sqf";
 waitUntil { count environment > 0 };
 [environment] call rqf_fnc_setEnvironment;
 
-// Focus on target marker.
-// disableserialization;
-// _mapDisplay = findDisplay 12;
-// _mapCtrl = _mapDisplay displayCtrl 51;
-// _mapCtrl ctrlMapAnimAdd [0, 0.1, position player];
-// ctrlMapAnimCommit _mapCtrl;
-
 // Show intro.
 _handle = [] call compile preprocessFileLineNumbers "init\init_clientIntro.sqf";
 waitUntil { scriptDone _handle };
