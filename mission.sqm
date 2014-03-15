@@ -36,175 +36,868 @@ class Mission
 	};
 	class Groups
 	{
-		items=2;
+		items=10;
 		class Item0
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=8;
+				items=4;
 				class Item0
 				{
-					position[]={14365.54,17.798643,15918.441};
+					position[]={347.8812,0.1866962,243.79724};
+					azimut=180;
+					special="NONE";
 					id=0;
 					side="WEST";
-					vehicle="B_Soldier_SL_F";
-					player="PLAYER COMMANDER";
+					vehicle="B_officer_F";
+					player="PLAY CDG";
 					leader=1;
-					rank="SERGEANT";
-					skill=0.5;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					init="this setGroupid [""1-МСР позывной 100""]; [""HATO"",""KR"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item1
 				{
-					position[]={14370.54,17.798643,15913.441};
+					position[]={349.28647,0.21149945,243.81677};
+					azimut=180;
+					special="NONE";
 					id=1;
 					side="WEST";
-					vehicle="B_Soldier_TL_F";
-					rank="SERGEANT";
-					skill=0.5;
+					vehicle="B_officer_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="[""HATO"",""KV"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item2
 				{
-					position[]={14360.54,17.790001,15913.441};
+					position[]={350.70145,0.22885101,243.8158};
+					azimut=180;
+					special="NONE";
 					id=2;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.44999999;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[""HATO"",""M"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item3
 				{
-					position[]={14375.54,17.798645,15908.441};
+					position[]={352.16531,0.23851253,243.84998};
+					azimut=180;
+					special="NONE";
 					id=3;
 					side="WEST";
-					vehicle="B_soldier_AR_F";
-					skill=0.40000001;
-				};
-				class Item4
-				{
-					position[]={14355.54,17.781979,15908.441};
-					id=4;
-					side="WEST";
-					vehicle="B_soldier_AAR_F";
-					skill=0.40000001;
-				};
-				class Item5
-				{
-					position[]={14380.54,17.79459,15903.441};
-					id=5;
-					side="WEST";
-					vehicle="B_soldier_LAT_F";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
-					skill=0.44999999;
-				};
-				class Item6
-				{
-					position[]={14350.54,17.780001,15903.441};
-					id=6;
-					side="WEST";
-					vehicle="B_medic_F";
-					skill=0.40000001;
-				};
-				class Item7
-				{
-					position[]={14385.54,17.790001,15898.441};
-					id=7;
-					side="WEST";
-					vehicle="B_Soldier_A_F";
-					skill=0.40000001;
+					skill=0.60000002;
+					init="[""HATO"",""R"",this] call bgr_fnc_ammoLoad;";
 				};
 			};
 		};
 		class Item1
 		{
-			side="EAST";
+			side="WEST";
 			class Vehicles
 			{
-				items=8;
+				items=4;
 				class Item0
 				{
-					position[]={15238.033,17.91,16808.84};
-					azimut=-162.533;
-					id=8;
-					side="EAST";
-					vehicle="O_Soldier_SL_F";
+					position[]={347.88315,0.24774712,247.27075};
+					azimut=180;
+					special="NONE";
+					id=4;
+					side="WEST";
+					vehicle="B_officer_F";
+					player="PLAY CDG";
 					leader=1;
-					rank="SERGEANT";
-					skill=0.5;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupid [""1-МСВ позывной 10""]; [""HATO"",""KV"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item1
 				{
-					position[]={15234.766,17.91,16815.109};
-					azimut=-162.533;
-					id=9;
-					side="EAST";
-					vehicle="O_Soldier_TL_F";
+					position[]={349.2894,0.25260884,247.29028};
+					azimut=180;
+					special="NONE";
+					id=5;
+					side="WEST";
+					vehicle="B_soldier_M_F";
+					player="PLAY CDG";
 					rank="SERGEANT";
-					skill=0.5;
+					skill=0.60000002;
+					init="[""HATO"",""SN"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item2
 				{
-					position[]={15244.306,17.91,16812.113};
-					azimut=-162.533;
-					id=10;
-					side="EAST";
-					vehicle="O_Soldier_AR_F";
+					position[]={350.70438,0.24820325,247.28931};
+					azimut=180;
+					special="NONE";
+					id=6;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
-					skill=0.44999999;
+					skill=0.60000002;
+					init="[""HATO"",""M"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item3
 				{
-					position[]={15231.499,17.91,16821.383};
-					azimut=-162.533;
+					position[]={352.16824,0.23393296,247.32349};
+					azimut=180;
+					special="NONE";
+					id=7;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HATO"",""R"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={345.53354,0.26588735,251.30981};
+					azimut=180;
+					special="NONE";
+					id=8;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupid [""1-МСО позывной 11""]; [""HATO"",""KO"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={346.93979,0.25924736,251.32935};
+					azimut=180;
+					special="NONE";
+					id=9;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""P"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={348.35483,0.24369262,251.32837};
+					azimut=180;
+					special="NONE";
+					id=10;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HATO"",""SS"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={349.81863,0.21853445,251.36255};
+					azimut=180;
+					special="NONE";
 					id=11;
-					side="EAST";
-					vehicle="O_Soldier_AR_F";
-					skill=0.40000001;
+					side="WEST";
+					vehicle="B_soldier_AT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HATO"",""G"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item4
 				{
-					position[]={15250.576,17.91,16815.375};
-					azimut=-162.533;
+					position[]={351.32645,0.18595308,251.35376};
+					azimut=180;
+					special="NONE";
 					id=12;
-					side="EAST";
-					vehicle="O_Soldier_AAR_F";
-					skill=0.40000001;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""PG"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item5
 				{
-					position[]={15228.23,17.91,16827.656};
-					azimut=-162.533;
+					position[]={352.61942,0.15276402,251.37329};
+					azimut=180;
+					special="NONE";
 					id=13;
-					side="EAST";
-					vehicle="O_Soldier_LAT_F";
-					rank="CORPORAL";
-					skill=0.44999999;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""S"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item6
 				{
-					position[]={15256.842,17.91,16818.645};
-					azimut=-162.533;
+					position[]={353.84695,0.11890505,251.39575};
+					azimut=180;
+					special="NONE";
 					id=14;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={345.43686,0.24357939,254.84399};
+					azimut=180;
+					special="NONE";
+					id=15;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupid [""2-МСО позывной 12""]; [""HATO"",""KO"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={346.84213,0.21657458,254.86255};
+					azimut=180;
+					special="NONE";
+					id=16;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""P"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={348.25717,0.18365747,254.86157};
+					azimut=180;
+					special="NONE";
+					id=17;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HATO"",""SS"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={349.72098,0.14463204,254.89575};
+					azimut=180;
+					special="NONE";
+					id=18;
+					side="WEST";
+					vehicle="B_soldier_AT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HATO"",""G"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item4
+				{
+					position[]={351.23074,0.10324977,254.88696};
+					azimut=180;
+					special="NONE";
+					id=19;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""PG"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item5
+				{
+					position[]={352.52078,0.067752123,254.90649};
+					azimut=180;
+					special="NONE";
+					id=20;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item6
+				{
+					position[]={353.75027,0.035897501,254.92896};
+					azimut=180;
+					special="NONE";
+					id=21;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={345.42416,0.17636053,258.24731};
+					azimut=180;
+					special="NONE";
+					id=22;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupid [""3-МСО позывной 13""]; [""HATO"",""KO"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={346.82944,0.13826315,258.26685};
+					azimut=180;
+					special="NONE";
+					id=23;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""P"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={348.24448,0.099603459,258.26685};
+					azimut=180;
+					special="NONE";
+					id=24;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HATO"",""SS"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={349.70731,0.060320821,258.302};
+					azimut=180;
+					special="NONE";
+					id=25;
+					side="WEST";
+					vehicle="B_soldier_AT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HATO"",""G"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item4
+				{
+					position[]={351.21707,0.024860598,258.29224};
+					azimut=180;
+					special="NONE";
+					id=26;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""PG"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item5
+				{
+					position[]={352.50809,-0.00093386322,258.31177};
+					azimut=180;
+					special="NONE";
+					id=27;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item6
+				{
+					position[]={353.7366,-0.019841388,258.33325};
+					azimut=180;
+					special="NONE";
+					id=28;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HATO"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item5
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={255.18921,0.052478556,259.07605};
+					azimut=180;
+					id=29;
 					side="EAST";
-					vehicle="O_medic_F";
-					skill=0.40000001;
+					vehicle="O_Soldier_SL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupid [""3-МСО позывной 13""]; [""HA"",""KO"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={256.94604,0.10515552,259.22839};
+					azimut=180;
+					id=30;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""P"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={258.42749,0.14401467,259.16687};
+					azimut=180;
+					id=31;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""SS"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={259.81226,0.18014868,259.24304};
+					azimut=180;
+					id=32;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""G"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item4
+				{
+					position[]={261.37671,0.21228506,259.20886};
+					azimut=180;
+					id=33;
+					side="EAST";
+					vehicle="O_Soldier_AAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""PG"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item5
+				{
+					position[]={262.81714,0.23444544,259.15222};
+					azimut=180;
+					id=34;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item6
+				{
+					position[]={264.39233,0.25020725,259.26062};
+					azimut=180;
+					id=35;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""S"",this] call bgr_fnc_ammoLoad;";
 				};
 				class Item7
 				{
-					position[]={15224.956,17.91,16833.922};
-					azimut=-162.533;
-					id=15;
+					position[]={265.72629,0.25389007,259.27917};
+					azimut=180;
+					id=36;
+					side="EAST";
+					vehicle="O_crew_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""T"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item8
+				{
+					position[]={267.24777,0.24858928,259.24695};
+					azimut=180;
+					id=37;
+					side="EAST";
+					vehicle="O_crew_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""T"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item6
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={255.03003,-0.022598431,255.61414};
+					azimut=180;
+					id=38;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupid [""2-МСО позывной 12""]; [""HA"",""KO"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={256.78687,0.018035084,255.76648};
+					azimut=180;
+					id=39;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""P"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={258.26733,0.054501075,255.70496};
+					azimut=180;
+					id=40;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""SS"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={259.65308,0.094347045,255.78113};
+					azimut=180;
+					id=41;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""G"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item4
+				{
+					position[]={261.21753,0.13667643,255.74695};
+					azimut=180;
+					id=42;
+					side="EAST";
+					vehicle="O_Soldier_AAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""PG"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item5
+				{
+					position[]={262.65796,0.17301425,255.69031};
+					azimut=180;
+					id=43;
 					side="EAST";
 					vehicle="O_Soldier_F";
-					skill=0.40000001;
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item6
+				{
+					position[]={264.23315,0.21136469,255.79871};
+					azimut=180;
+					id=44;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item7
+				{
+					position[]={265.56714,0.23598368,255.81726};
+					azimut=180;
+					id=45;
+					side="EAST";
+					vehicle="O_crew_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""T"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item8
+				{
+					position[]={267.08859,0.25512797,255.78503};
+					azimut=180;
+					id=46;
+					side="EAST";
+					vehicle="O_crew_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""T"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item7
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={255.4812,-0.048035674,252.05457};
+					azimut=180;
+					id=47;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setGroupid [""1-МСО позывной 11""]; [""HA"",""KO"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={257.23804,-0.030817121,252.20691};
+					azimut=180;
+					id=48;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""P"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={258.71851,-0.0079035163,252.14539};
+					azimut=180;
+					id=49;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""SS"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={260.10425,0.022518843,252.22156};
+					azimut=180;
+					id=50;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""G"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item4
+				{
+					position[]={261.6687,0.060529392,252.18738};
+					azimut=180;
+					id=51;
+					side="EAST";
+					vehicle="O_Soldier_AAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""PG"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item5
+				{
+					position[]={263.10913,0.097979881,252.13074};
+					azimut=180;
+					id=52;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item6
+				{
+					position[]={264.68433,0.14392938,252.23914};
+					azimut=180;
+					id=53;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""S"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item7
+				{
+					position[]={266.01828,0.17941259,252.25769};
+					azimut=180;
+					id=54;
+					side="EAST";
+					vehicle="O_crew_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""T"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item8
+				{
+					position[]={267.53976,0.21440926,252.22546};
+					azimut=180;
+					id=55;
+					side="EAST";
+					vehicle="O_crew_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[""HA"",""T"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item8
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={259.18921,-0.0056841671,244.55078};
+					azimut=180;
+					id=56;
+					side="EAST";
+					vehicle="O_officer_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupid [""1-МСВ позывной 10""]; [""HA"",""KV"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={260.65112,-0.019346543,244.45996};
+					azimut=180;
+					id=57;
+					side="EAST";
+					vehicle="O_soldier_M_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[""HA"",""SN"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={262.02319,-0.025602385,244.50586};
+					azimut=180;
+					id=58;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""M"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={263.51929,-0.022343062,244.50586};
+					azimut=180;
+					id=59;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""R"",this] call bgr_fnc_ammoLoad;";
+				};
+			};
+		};
+		class Item9
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={259.08081,-0.036031976,248.03894};
+					azimut=180;
+					id=60;
+					side="EAST";
+					vehicle="O_officer_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this setGroupid [""2-МСВ позывной 20""]; [""HA"",""KV"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item1
+				{
+					position[]={260.54272,-0.028418235,247.94812};
+					azimut=180;
+					id=61;
+					side="EAST";
+					vehicle="O_soldier_M_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[""HA"",""SN"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item2
+				{
+					position[]={261.91479,-0.01240091,247.99402};
+					azimut=180;
+					id=62;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""M"",this] call bgr_fnc_ammoLoad;";
+				};
+				class Item3
+				{
+					position[]={263.46948,0.014316477,247.99402};
+					azimut=180;
+					id=63;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[""HA"",""R"",this] call bgr_fnc_ammoLoad;";
 				};
 			};
 		};
 	};
 	class Markers
 	{
-		items=8;
+		items=10;
 		class Item0
 		{
 			position[]={6605.5215,185.22238,20327.666};
@@ -284,6 +977,20 @@ class Mission
 			colorName="ColorOrange";
 			a=5000;
 			b=5000;
+		};
+		class Item8
+		{
+			position[]={263.25366,-0.014919609,242.20508};
+			name="StartR";
+			type="hd_start";
+			colorName="ColorOPFOR";
+		};
+		class Item9
+		{
+			position[]={356.638,0.10436903,248.86938};
+			name="StartB";
+			type="hd_start";
+			colorName="ColorBLUFOR";
 		};
 	};
 };

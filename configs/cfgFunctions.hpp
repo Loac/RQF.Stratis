@@ -17,4 +17,27 @@ class CfgFunctions
             class getRandomValue { description = "Get random value from parameter."; };
         };
     };
+
+    class bgr
+    {
+        class weapon
+        {
+            class ammoLoad
+            {
+                file = "HA\weapon\core\fn_ammoLoad.sqf";
+            };
+            class magsAdd
+            {
+                file = "HA\weapon\core\fn_magsAdd.sqf";
+            };
+            class ammoClear
+            {
+                file = "HA\weapon\core\fn_ammoClear.sqf";
+            };
+            class setUniformSide
+            {
+                file = "HA\weapon\core\fn_setUniformSide.sqf";
+            };
+        };
+    };
 };

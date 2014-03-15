@@ -27,12 +27,12 @@ if (_enable) then {
 else {
     // Disable AI.
     {
-        _x setVariable ["BIS_noCoreConversations", true];
-        _x allowFleeing 0;
-        _x disableAI "AUTOTARGET";
-        _x disableAI "ANIM";
-        _x disableAI "FSM";
-        _x disableAI "MOVE";
-        _x disableAI "PATHPLAN";
+        // _x setVariable ["BIS_noCoreConversations", true];
+        // _x allowFleeing 0;
+        // _x disableAI "AUTOTARGET";
+        // _x disableAI "ANIM";
+        // _x disableAI "FSM";
+        // _x disableAI "MOVE";
+        // _x disableAI "PATHPLAN";
     } foreach allUnits;
 };

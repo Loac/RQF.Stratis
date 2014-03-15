@@ -1,7 +1,7 @@
 enableDebugConsole = 2;
 allowFunctionsLog = 1;
 
-onLoadName = "RQF Stratis";
+onLoadName = "[HA] RQF Stratis";
 onLoadMission = "Good luck";
 author = "Loac";
 

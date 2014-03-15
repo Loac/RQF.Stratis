@@ -1,5 +1,5 @@
 /*
-Created by Vadim Shchemelinin aka badger 
+Created by Vadim Shchemelinin aka badger
 2013 St.Petersburg Russia
 
 Script for www.Our-Army.su
@@ -26,7 +26,7 @@ _unit = [_this,_unitParId,objnull,[objnull]] call BIS_fnc_param;
 //for possibity to load saving weapon
 _unitsTemplate = _unit getVariable ["bgrWeaponTemplate",['','']];
 _file = (_unitsTemplate select 0);
-_type = (_unitsTemplate select 1); 
+_type = (_unitsTemplate select 1);
 
 if ((count _this)>1) then {
 	_file = [_this,0,'',['']] call BIS_fnc_param;
@@ -42,8 +42,8 @@ if (isNil "bgrWeaponUsingFilesList") then {bgrWeaponUsingFilesList = []};
 if !(_file in bgrWeaponUsingFilesList) then {
 	//_file call f_bgrWeaponCompile;  no need call init
 	_compiled = false;
-	_compiled = call compile format ["f_bgrWeaponList_%1 = compile preProcessFileLineNumbers 'weapon\%1.sqf'; true",_file]; //!
-	if !(_compiled) exitWith {["File parametr = '%1'. Template 'weapon\%1.sqf' can not be compiled!",_file] call BIS_fnc_error; false};
+	_compiled = call compile format ["f_bgrWeaponList_%1 = compile preProcessFileLineNumbers 'HA\weapon\%1.sqf'; true",_file]; //!
+	if !(_compiled) exitWith {["File parametr = '%1'. Template 'HA\weapon\%1.sqf' can not be compiled!",_file] call BIS_fnc_error; false};
 	bgrWeaponUsingFilesList = bgrWeaponUsingFilesList + [_file];
 };
 
@@ -74,13 +74,13 @@ _ruck = [_arr,6,[],[[]]] call BIS_fnc_param;
 //     Clear the unit's inventory     //
 ////////////////////////////////////////
 
-removeAllWeapons _unit; 
+removeAllWeapons _unit;
 //removeGoggles _unit; for profile googles
 _goggles = goggles _unit;
-removeVest _unit; 
-removeHeadgear _unit; 
-removeUniform _unit; 
-removeBackpack _unit; 
+removeVest _unit;
+removeHeadgear _unit;
+removeUniform _unit;
+removeBackpack _unit;
 removeAllAssignedItems _unit;
 removeAllItems _unit;
 
@@ -116,7 +116,7 @@ if (_v != '') then {
 _u = [_uniform,0,'',[[],'']] call BIS_fnc_param;
 //if we have uniform array for random select
 if (typeName _u == "ARRAY") then {_u = _u call BIS_fnc_selectRandom;};
-if (_u != '') then {		
+if (_u != '') then {
 	if (isclass (configfile >> "cfgWeapons" >> _u)) then {
 	//if (_unit canAdd _u) then {
 		_u = [_unit,_u] call bgr_fnc_setUniformSide;
@@ -171,7 +171,7 @@ if (_goggles != "") then {_unit addGoggles _goggles;};
 					_unit assignItem _item;
 				};
 			default {
-					_unit addWeapon _item;					
+					_unit addWeapon _item;
 				};
 		};
 	};

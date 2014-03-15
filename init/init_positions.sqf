@@ -33,7 +33,7 @@ _redCount = 0;
 // _redCount = playersNumber east;
 
 // Strange pause for dedicated server.
-waitUntil { time > 1 };
+waitUntil { time > 3 };
 
 // Count the number of units.
 {
