@@ -24,6 +24,10 @@ private [
     "_isAI"
 ];
 
+// Wait init_positions complited, because bots can't move by setPos after disable ANIM.
+waitUntil { time > 1 };
+
+// Disable AI.
 _handle = [false] execVM "init\init_aiControl.sqf";
 
 // If AI is enabled.

@@ -32,7 +32,8 @@ _redCount = 0;
 // _blueCount = playersNumber west;
 // _redCount = playersNumber east;
 
-waitUntil { time > 2 }; // Strange pause for dedicated server.
+// Strange pause for dedicated server.
+waitUntil { time > 1 };
 
 // Count the number of units.
 {
