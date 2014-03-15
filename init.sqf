@@ -120,7 +120,7 @@ if (not isDedicated) then {
     /*
         Development.
     */
-    if (not isMultiplayer) then {
+    if (false) then {
         _handle = [] execVM "init\init_devel.sqf";
     };
 };
