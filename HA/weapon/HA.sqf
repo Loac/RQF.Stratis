@@ -10,18 +10,18 @@ _arr=[]; _ok = true;
 //change NVG to FlashLight
 //_Nvg="acc_flashlight";
 
-_Form = ["U_I_CombatUniform","U_I_CombatUniform_tshirt"];
-_FormO = "U_I_OfficerUniform";
-_Vest = 'V_PlateCarrierIA2_dgtl';
-_VestL = "V_PlateCarrierIA1_dgtl";
-_VestSp= 'V_Chestrig_oli';
-_Helm = ['H_HelmetIA','H_HelmetIA_net'];
-_Cap = ['H_MilCap_rucamo'];
-_HelmC = 'H_HelmetCrew_I';
-_HelmV = 'H_PilotHelmetHeli_I';
-_HelmJ = 'H_PilotHelmetFighter_I';
-_FormJ = "U_I_pilotCoveralls";
-_Rucksack = 'B_TacticalPack_oli';
+_Form = ["U_O_CombatUniform_ocamo"];
+_FormO = "U_O_OfficerUniform_ocamo";
+_Vest = 'V_HarnessO_gry';
+_VestL = "V_HarnessO_gry";
+_VestSp= 'V_HarnessO_gry';
+_Helm = ['H_HelmetO_ocamo','H_HelmetLeaderO_ocamo'];
+_Cap = ['H_MilCap_oucamo'];
+_HelmC = 'H_HelmetCrew_O';
+_HelmV = 'H_CrewHelmetHeli_O';
+_HelmJ = 'H_PilotHelmetFighter_O';
+_FormJ = "U_O_PilotCoveralls";
+_Rucksack = 'B_TacticalPack_ocamo';
 
 _Rifle = 'arifle_Katiba_F';
 _RifleGL = 'arifle_Katiba_GL_F';
