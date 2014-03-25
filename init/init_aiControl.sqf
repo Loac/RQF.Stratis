@@ -34,5 +34,6 @@ else {
         _x disableAI "FSM";
         _x disableAI "MOVE";
         _x disableAI "PATHPLAN";
+        //{_unit disableAI _x} forEach ["ANIM", "AUTOTARGET", "FSM", "MOVE", "TARGET"]};
     } foreach allUnits;
 };

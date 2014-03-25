@@ -161,4 +161,16 @@ if (not isDedicated) then {
 // Добавить неиграбельные маркера: если точка спавна или старта попадает в область этого маркера
     // искать новую точку.
 
-// Test.
+// На время брифинга отключить повреждения.
+
+// Hide player's waypoints
+// {_x setWaypointVisible false} forEach (waypoints group BIS_inf + waypoints BIS_BLU_group2);
+
+// Возможно, движение карты в брифинге.
+// x = [] spawn
+// {
+//     (findDisplay 37 displayCtrl 51) ctrlmapAnimAdd [1, 0.2, markerPos "BIS_mrkBriefingCenter"];
+//     ctrlmapAnimCommit (findDisplay 37 displayCtrl 51);
+// };
+
+// _video = ["A3\Missions_F_EPA\video\A_in_intro.ogv"] spawn BIS_fnc_playVideo;
