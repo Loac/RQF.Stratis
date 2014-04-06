@@ -13,6 +13,7 @@ waitUntil {
 
     // Skip freeze time if both sides agree.
     if (freezeTime > 5 and blueReady and redReady) then {
+        // TODO: I think, here just set freezeTime = 5.
         _handle = [["freezeTime", 5]] call rqf_fnc_broadcast;
     };
 

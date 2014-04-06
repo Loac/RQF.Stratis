@@ -11,7 +11,7 @@ class Params
     class targetDistance
     {
         title = "$STR_RQF_params_targetDistance";
-        values[] = { 200, 300, 500, 600 };
+        values[] = { 200, 300, 400, 500, 600 };
         texts[] = { "200", "300", "400", "500", "600" };
         default = 200;
     };
